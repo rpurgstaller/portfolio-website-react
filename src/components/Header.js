@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export default function Header() {
 
   return (
-    <div>
-        <Link to="/">home </Link>
-        <Link to="/about">about </Link>
-        <Link to="/projects">projects</Link>
-        <Link to="/uses">uses</Link>
-        <Link to="/bookshelf">bookshelf</Link>
-    </div>
+    <nav className="navbar">
+        <Link to="/" className="nav-link">home </Link>
+        <Link to="/about" className="nav-link">about </Link>
+        <Link to="/projects" className="nav-link">projects</Link>
+        <Link to="/uses" className="nav-link">uses</Link>
+        <Link to="/bookshelf" className="nav-link">bookshelf</Link>
+    </nav>
   );
 
 }

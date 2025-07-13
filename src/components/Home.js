@@ -1,18 +1,19 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-
+import {FaGithub, FaLinkedin, FaStackOverflow} from "react-icons/fa";
+import {FaHackerrank} from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div
-      className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center p-8">
-      <h1 className="text-5xl font-extrabold">Welcome to My Portfolio</h1>
-      <p className="text-xl mt-4 max-w-xl">I'm a passionate developer creating awesome projects that bring ideas to
-        life.</p>
-      <Link to="/projects"
-            className="mt-6 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
-        View My Work
-      </Link>
+    <div className="container home">
+      <h1>Roman Purgstaller</h1>
+      <h3>Tech Lead | Product Manager</h3>
+      <h3>currently based in Graz, Austria</h3>
+      <div>
+        <FaGithub className="svg-icon"/>
+        <FaHackerrank className="svg-icon"/>
+        <FaStackOverflow className="svg-icon"/>
+        <FaLinkedin className="svg-icon"/>
+      </div>
     </div>
   );
 }

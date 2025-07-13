@@ -1,12 +1,12 @@
 export default function Projects() {
   return (
-    <div className="p-8 text-center">
-      <h1 className="text-3xl font-bold">My Projects</h1>
-      <ul className="mt-4">
-        <li className="text-lg">🚀 Project 1</li>
-        <li className="text-lg">🎨 Project 2</li>
-        <li className="text-lg">🛠️ Project 3</li>
-      </ul>
+    <div className="container projects">
+      <h1>My Projects</h1>
+      <div className="project-list">
+        <div className="project-card">🚀 Project 1</div>
+        <div className="project-card">🎨 Project 2</div>
+        <div className="project-card">🛠️ Project 3</div>
+      </div>
     </div>
   );
 }
