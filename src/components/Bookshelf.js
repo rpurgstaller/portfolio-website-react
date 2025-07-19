@@ -1,13 +1,13 @@
 export default function Projects() {
   const style_book_container = {
-    display: 'flex',
-    height: '100vh',
-    justifyContent: 'space-between',
-  }
+    display: "flex",
+    height: "100vh",
+    justifyContent: "space-between",
+  };
   const style_book_cols = {
-    width: '50%',
-    padding: '10px',
-  }
+    width: "50%",
+    padding: "10px",
+  };
   return (
     <div className="container bookshelf">
       <h1>Bookshelf</h1>
@@ -34,7 +34,6 @@ export default function Projects() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

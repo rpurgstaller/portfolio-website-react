@@ -4,16 +4,40 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  text-align: left;
+}
+
+.header-container {
+  background: #4caf50;
+  padding: 50px 0 0 50px;
+  height: 50px;
+}
+
+.header-container-left {
+  width: 20%;
+  float: left;
+  text-align: center;
+  display: flex;
+  //background: #61dafb;
+}
+
+.header-logo {
+  font-size: 24px;
+  //color: #282c34;
+}
+
+.header-container-right {
+  width: 80%;
+  float: right;
+  //background: #282c34;
 }
 
 .navbar {
-  background: #333;
-  padding: 15px;
+  padding-top: 5px;
   text-align: center;
 }
 
 .nav-link {
-  color: white;
   margin: 0 15px;
   text-decoration: none;
   font-size: 18px;
@@ -22,32 +46,3 @@ body {
 .nav-link:hover {
   color: #f0a500;
 }
-
-.container {
-  text-align: center;
-  padding: 50px;
-}
-
-.project-list {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.project-card {
-  background: white;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #f0a500;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-

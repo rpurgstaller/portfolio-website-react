@@ -1,0 +1,26 @@
+//* {
+//  margin: 0;
+//  padding: 0;
+//  box-sizing: border-box;
+//  min-height: 0;
+//  min-width: 0;
+//  font-family: inherit;
+//}
+/* @vars */
+:root {
+  --hover: #5d1785;
+  --media-icon: #dbdbdb;
+  --media-icon-hover: var(--hover);
+  --button-color: #dbdbdb;
+  --button-hover: var(--hover);
+  --header-link: #dbdbbd;
+  --header-link-hover: var(--hover);
+  --header-link-active: #70757a;
+}
+/* @layout */
+html {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  text-align: center;
+  color: #70757a; //#2c3e50;
+}
