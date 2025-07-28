@@ -12,6 +12,25 @@ export default function Projects() {
     <div className="container bookshelf">
       <h1>Bookshelf</h1>
       <p>Here is a list of books I really enjoyed</p>
+      Non-Fiction:
+      <ul>
+        <li>The pragmatic programmer</li>
+        <li>Designing Data-Intensive Applications</li>
+        <li>The managers path</li>
+        <li>A Thousand Brains</li>
+        <li>Algorithm for decision making</li>
+        <li>The infinite Game</li>
+        <li>Thinking, Fast and Slow</li>
+        <li>Getting to Yes</li>
+      </ul>
+      Fiction:
+      <ul>
+        <li>Remembrance of Earth's Past series</li>
+        <li>Project Hail Mary</li>
+        <li>Die Schachnovelle (german)</li>
+        <li>A Wild Sheep Chase</li>
+        <li>To Kill a Mockingbird</li>
+      </ul>
       <div style={style_book_container}>
         <div style={style_book_cols}>
           <h2>Fiction</h2>

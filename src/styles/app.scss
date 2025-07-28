@@ -1,26 +1,34 @@
-//* {
-//  margin: 0;
-//  padding: 0;
-//  box-sizing: border-box;
-//  min-height: 0;
-//  min-width: 0;
-//  font-family: inherit;
-//}
-/* @vars */
-:root {
-  --hover: #5d1785;
-  --media-icon: #dbdbdb;
-  --media-icon-hover: var(--hover);
-  --button-color: #dbdbdb;
-  --button-hover: var(--hover);
-  --header-link: #dbdbbd;
-  --header-link-hover: var(--hover);
-  --header-link-active: #70757a;
+@use 'shared/typo';
+@use 'shared/colors';
+
+html,
+body {
+  height: 100%;
+  font-weight: typo.$font-weight-regular;
+  font-size: typo.$font-size-base;
+  font-family: typo.$font-family-display;
+  line-height: typo.$line-height;
+
+  p {
+    line-height: 150%;
+  }
+
+  a,
+  a:link {
+    text-decoration: none;
+  }
 }
-/* @layout */
-html {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  text-align: center;
-  color: #70757a; //#2c3e50;
+
+$padding-mobile: 1rem 2rem 1rem 2rem;
+$padding-desktop: 4rem 10rem 4rem 10rem;
+$max-width: 1200px;
+
+.app-layout {
+  margin: 0 auto;
+  padding: $padding-mobile;
+  max-width: $max-width;
+
+  @media (min-width: 768px) {
+    padding: $padding-desktop;
+  }
 }

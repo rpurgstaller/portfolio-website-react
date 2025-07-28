@@ -1,6 +1,25 @@
+@use 'shared/typo';
+@use 'shared/colors';
+
 .svg-icon {
   width: 32px;
   height: 32px;
-  fill: #000000;
-  margin: 4px;
+  fill: colors.$text-link;
+  transition: fill 600ms ease-out;
+  margin-right: 12px;
 }
+
+.svg-icon:hover {
+  fill: colors.$text-active;
+}
+
+.introduction-text {
+  font-size: typo.$font-size-heading;
+  font-weight: 500;
+  color: colors.$secondary-text;
+}
+
+.social-icons-container {
+  padding-top: 1.5rem;
+}
+

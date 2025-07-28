@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
-    <div className="container uses">
-      <h1>Uses</h1>
+    <div className="container picks">
       <h2>Engineering</h2>
       <ul>
         <li>
@@ -38,9 +37,28 @@ export default function Projects() {
         <li>
           <Link to="https://www.autohotkey.com/">Autohotkey</Link>
         </li>
+        <li>
+          <Link to="https://syncthing.net/">Syncthing</Link>
+        </li>
+      </ul>
+      <h2>Podcasts</h2>
+      <ul>
+        <li>
+          <Link to="https://darknetdiaries.com/">Darknet Diaries</Link>
+        </li>
+        <li>
+          <Link to="https://www.dancarlin.com/hardcore-history-series/">Hardcore History Series - Dan Carlin</Link>
+        </li>
+        <li>
+          <Link to="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html">NRD Info: Synapsen (german)</Link>
+        </li>
+        <li>
+          Brave new planet (?)
+        </li>
       </ul>
       checkout https://rusingh.com/uses/#primary-computer-development for
-      additional stuff, also https://fediring.net/ also https://www.anh.ng/uses
+      additional stuff, also https://fediring.net/ also https://www.anh.ng/uses, best: https://www.jasonjun.dev/picks or
+      https://jason-blog.netlify.app/about/ - eventually change to "picks" and include podcasts
     </div>
   );
 }

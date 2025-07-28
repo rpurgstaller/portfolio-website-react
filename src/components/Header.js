@@ -1,29 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header-container">
       <div className="header-container-left">
-        <Link to="/" className="header-logo">
+        <NavLink to="/" className={({ isActive }) => (isActive ? "header-logo active" : "header-logo")}>
           Roman Purgstaller
-        </Link>
+        </NavLink>
       </div>
 
       <div className="header-container-right">
         <nav className="navbar">
-          <Link to="/about" className="nav-link">
-            about{" "}
-          </Link>
-          <Link to="/projects" className="nav-link">
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             projects
-          </Link>
-          <Link to="/uses" className="nav-link">
-            uses
-          </Link>
-          <Link to="/bookshelf" className="nav-link">
+          </NavLink>
+          <NavLink to="/uses" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            picks
+          </NavLink>
+          <NavLink to="/bookshelf" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
             bookshelf
-          </Link>
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+            about{" "}
+          </NavLink>
         </nav>
       </div>
     </header>
