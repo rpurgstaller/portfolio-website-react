@@ -30,6 +30,7 @@ export default function Projects() {
         <li>Die Schachnovelle (german)</li>
         <li>A Wild Sheep Chase</li>
         <li>To Kill a Mockingbird</li>
+        <li>The Left Hand of Darkness</li>
       </ul>
       <div style={style_book_container}>
         <div style={style_book_cols}>
