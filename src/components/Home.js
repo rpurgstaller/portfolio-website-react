@@ -3,6 +3,7 @@ import {FaGithub, FaLinkedin, FaStackOverflow} from "react-icons/fa";
 import { FaHackerrank } from "react-icons/fa";
 import {MdEmail} from "react-icons/md";
 
+
 export default function Home() {
   return (
     <div className="container home">

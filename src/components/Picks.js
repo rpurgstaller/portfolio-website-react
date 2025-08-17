@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { ExternalLink } from "../utils/Link";
 
 function PickEntry({ labels, name, url }) {
   let name_elem =
     <div className="name-column">
       {url ? (
-        <Link to={url} target="_blank" rel="noopener noreferrer">{name}</Link>
+        ExternalLink(url, name)
       ) : (
         <span>{name}</span>
       )}
@@ -36,16 +36,15 @@ function PickEntry({ labels, name, url }) {
 export default function Picks() {
   return (
     <div className="picks-container">
-    <PickEntry labels={["search-engine"]} name="DuckDuckGo" url="https://duckduckgo.com/" />
-    <PickEntry labels={["browser"]} name="DuckDuckGo" url="" />
-    <PickEntry labels={["browser", "work"]} name="Chrome" url="" />
+    <PickEntry labels={["search-engine", "browser"]} name="DuckDuckGo" url="https://duckduckgo.com/" />
+    <PickEntry labels={["browser"]} name="Firefox" url="https://www.firefox.com/" />
     <PickEntry labels={["os"]} name="Ubuntu" url="" />
     <PickEntry labels={["os", "work"]} name="Windows" url="" />
-    <PickEntry labels={["ide", "code-editor"]} name="VS Code" url="https://code.visualstudio.com/" />
-    <PickEntry labels={["ide", "code-editor"]} name="PyCharm" url="https://www.jetbrains.com/pycharm/" />
-    <PickEntry labels={["api-testing"]} name="Bruno" url="https://www.usebruno.com/" />
-    <PickEntry labels={["ide", "database"]} name="pgAdmin" url="https://www.pgadmin.org/" />
-    <PickEntry labels={["ide", "latex"]} name="TeXstudio" url="" />
+    <PickEntry labels={["ide", "development"]} name="VS Code" url="https://code.visualstudio.com/" />
+    <PickEntry labels={["ide", "development"]} name="PyCharm" url="https://www.jetbrains.com/pycharm/" />
+    <PickEntry labels={["api-testing", "development"]} name="Bruno" url="https://www.usebruno.com/" />
+    <PickEntry labels={["ide", "database", "development"]} name="pgAdmin" url="https://www.pgadmin.org/" />
+    <PickEntry labels={["ide", "latex", "development"]} name="TeXstudio" url="https://www.texstudio.org/" />
 
     <PickEntry labels={["email", "calendar"]} name="Tuta" url="https://mail.tutanota.com/" />
     <PickEntry labels={["organization"]} name="Obsidian" url="https://obsidian.md/" />
@@ -54,9 +53,9 @@ export default function Picks() {
     <PickEntry labels={["sync"]} name="Syncthing" url="https://syncthing.net/" />
 
     <PickEntry labels={["podcast"]} name="Darknet Diaries" url="https://darknetdiaries.com/" />
-    <PickEntry labels={["podcast"]} name="Hardcore History Series - Dan Carlin" url="https://www.dancarlin.com/hardcore-history-series/" />
+    <PickEntry labels={["podcast"]} name="Hardcore History Series" url="https://www.dancarlin.com/hardcore-history-series/" />
     <PickEntry labels={["podcast"]} name="NRD Info: Synapsen (german)" url="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html" />
-    <PickEntry labels={["podcast"]} name="Brave new planet (?)" url="" />
+    <PickEntry labels={["podcast"]} name="Brave new planet (?)" url="https://www.bravenewplanet.org/" />
 
       checkout https://rusingh.com/uses/#primary-computer-development for
       additional stuff, also https://fediring.net/ also https://www.anh.ng/uses, best: https://www.jasonjun.dev/picks or

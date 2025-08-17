@@ -4,13 +4,13 @@
 .svg-icon {
   width: 32px;
   height: 32px;
-  fill: colors.$text-link;
+  fill: colors.$link-inactive;
   transition: fill 600ms ease-out;
   margin-right: 12px;
 }
 
 .svg-icon:hover {
-  fill: colors.$text-active;
+  fill: colors.$text;
 }
 
 .introduction-text {

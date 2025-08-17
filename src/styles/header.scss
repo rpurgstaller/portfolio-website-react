@@ -16,69 +16,32 @@
 .header-logo {
   font-size: 1.4rem;
   color: colors.$primary-text;
-  transition: background-color 0.3s ease;
-  border-radius: 0.4rem;
-  position: relative;
 }
 
 .navbar {
   text-align: right;
 }
 
-.nav-link {
+.nav {
   margin: 0 0 0 0.5rem;
   font-size: 1.1rem;
-  text-decoration: none;
-  color: colors.$text-link;
-  transition: background-color 0.3s ease;
-  padding: 0.3rem;
-  border-radius: 0.3rem;
-  position: relative;
+  color: colors.$link-inactive;
 }
 
+.nav.active{
+    color: colors.$text;
+}
 
 .header-logo::before {
-  content: "";
-  position: absolute;
   top: -5px;
   left: -8px;
   right: -8px;
   bottom: -5px;
-  background-color: colors.$background-text-hover;
-  border-radius: 0.4rem;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav-link::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -3px;
-  right: -3px;
-  bottom: -2px;
-  background-color: colors.$background-text-hover;
-  border-radius: 0.4rem;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-
-}
-
-.nav-link:hover:not(.active)::before,
-.header-logo:hover:not(.active)::before {
-  opacity: 1;
-}
-
-.nav-link.active{
-    color: colors.$text-active;
 }
 
 .header-container-right {
   width: 75%;
   float: right;
-  //background: #282c34;
 }
 
 
