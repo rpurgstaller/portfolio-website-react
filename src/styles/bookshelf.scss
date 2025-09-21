@@ -1,0 +1,40 @@
+@use 'shared/typo';
+@use 'shared/colors';
+
+.bookshelf-entry-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  align-items: flex-start;
+  border-bottom: 1px solid colors.$light-gray;
+  justify-content: space-between;
+}
+
+.bookshelf-title-column {
+  min-width: 450px;
+}
+
+.bookshelf-author {
+    font-size: 0.9rem;
+    color: colors.$secondary-text;
+    margin-top: 0.2rem;
+}
+
+.bookshelf-labels-column {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.bookshelf-labels-column span {
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  background-color: #f9f9f9;
+  white-space: nowrap;
+}

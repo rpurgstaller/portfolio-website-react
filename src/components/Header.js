@@ -15,7 +15,7 @@ export default function Header() {
           <NavLink to="/projects" className={({ isActive }) => (isActive ? "link-border nav active" : "link-border nav")}>
             projects
           </NavLink>
-          <NavLink to="/uses" className={({ isActive }) => (isActive ? "link-border nav active" : "link-border nav")}>
+          <NavLink to="/picks" className={({ isActive }) => (isActive ? "link-border nav active" : "link-border nav")}>
             picks
           </NavLink>
           <NavLink to="/bookshelf" className={({ isActive }) => (isActive ? "link-border nav active" : "link-border nav")}>

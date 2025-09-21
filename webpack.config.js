@@ -18,7 +18,7 @@ module.exports = {
             loader: "sass-loader",
             options: {
               sassOptions: {
-                includePaths: ["src/styles", "src/styles/shared"]
+                includePaths: ["src/styles", "src/styles/shared", "public"]
               }
             }
           }

@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Uses from "./components/Picks";
+import Picks from "./components/Picks";
 import Bookshelf from "./components/Bookshelf";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/uses" element={<Uses />} />
+          <Route path="/picks" element={<Picks />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
         </Routes>
       </div>

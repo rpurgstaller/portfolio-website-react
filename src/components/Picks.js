@@ -2,7 +2,7 @@ import { ExternalLink } from "../utils/Link";
 
 function PickEntry({ labels, name, url }) {
   let name_elem =
-    <div className="name-column">
+    <div className="picks-name-column">
       {url ? (
         ExternalLink(url, name)
       ) : (
@@ -11,7 +11,7 @@ function PickEntry({ labels, name, url }) {
     </div>
 
   let labels_elem =
-    <div className="labels-column">
+    <div className="picks-labels-column">
       {labels.map((label, index) => (
         <span key={index}>{label}</span>
       ))}
@@ -19,7 +19,7 @@ function PickEntry({ labels, name, url }) {
 
 
   let description =
-    <div className="description-column">
+    <div className="picks-description-column">
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
       dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
       Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -39,7 +39,6 @@ export default function Picks() {
     <PickEntry labels={["search-engine", "browser"]} name="DuckDuckGo" url="https://duckduckgo.com/" />
     <PickEntry labels={["browser"]} name="Firefox" url="https://www.firefox.com/" />
     <PickEntry labels={["os"]} name="Ubuntu" url="" />
-    <PickEntry labels={["os", "work"]} name="Windows" url="" />
     <PickEntry labels={["ide", "development"]} name="VS Code" url="https://code.visualstudio.com/" />
     <PickEntry labels={["ide", "development"]} name="PyCharm" url="https://www.jetbrains.com/pycharm/" />
     <PickEntry labels={["api-testing", "development"]} name="Bruno" url="https://www.usebruno.com/" />
@@ -55,11 +54,6 @@ export default function Picks() {
     <PickEntry labels={["podcast"]} name="Darknet Diaries" url="https://darknetdiaries.com/" />
     <PickEntry labels={["podcast"]} name="Hardcore History Series" url="https://www.dancarlin.com/hardcore-history-series/" />
     <PickEntry labels={["podcast"]} name="NRD Info: Synapsen (german)" url="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html" />
-    <PickEntry labels={["podcast"]} name="Brave new planet (?)" url="https://www.bravenewplanet.org/" />
-
-      checkout https://rusingh.com/uses/#primary-computer-development for
-      additional stuff, also https://fediring.net/ also https://www.anh.ng/uses, best: https://www.jasonjun.dev/picks or
-      https://jason-blog.netlify.app/about/ - eventually change to "picks" and include podcasts
     </div>
   );
 }

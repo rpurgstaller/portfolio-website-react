@@ -1,59 +1,42 @@
-export default function Projects() {
-  const style_book_container = {
-    display: "flex",
-    height: "100vh",
-    justifyContent: "space-between",
-  };
-  const style_book_cols = {
-    width: "50%",
-    padding: "10px",
-  };
+import {ExternalLink} from "../utils/Link";
+
+function BookshelfEntry({ name, author, labels }) {
+  let title =
+    <div className="bookshelf-title-column">
+      <span className="bookshelf-title">{name}</span><span className="bookshelf-author"> - {author}</span>
+    </div>
+
+  let labels_elem =
+    <div className="bookshelf-labels-column">
+      {labels.map((label, index) => (
+        <span key={index}>{label}</span>
+      ))}
+    </div>
+
   return (
-    <div className="container bookshelf">
-      <h1>Bookshelf</h1>
-      <p>Here is a list of books I really enjoyed</p>
-      Non-Fiction:
-      <ul>
-        <li>The pragmatic programmer</li>
-        <li>Designing Data-Intensive Applications</li>
-        <li>The managers path</li>
-        <li>A Thousand Brains</li>
-        <li>Algorithm for decision making</li>
-        <li>The infinite Game</li>
-        <li>Thinking, Fast and Slow</li>
-        <li>Getting to Yes</li>
-      </ul>
-      Fiction:
-      <ul>
-        <li>Remembrance of Earth's Past series</li>
-        <li>Project Hail Mary</li>
-        <li>Die Schachnovelle (german)</li>
-        <li>A Wild Sheep Chase</li>
-        <li>To Kill a Mockingbird</li>
-        <li>The Left Hand of Darkness</li>
-      </ul>
-      <div style={style_book_container}>
-        <div style={style_book_cols}>
-          <h2>Fiction</h2>
-          <div className="book-list">
-            <div className="book-card">
-              <h3>Atomic Habits</h3>
-              <p>by James Clear</p>
-              <p>A guide to building good habits and breaking bad ones.</p>
-            </div>
-          </div>
-        </div>
-        <div style={style_book_cols}>
-          <h3>Non-Fiction</h3>
-          <div className="book-list">
-            <div className="book-card">
-              <h2>Atomic Habits</h2>
-              <p>by James Clear</p>
-              <p>A guide to building good habits and breaking bad ones.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="bookshelf-entry-row">
+      {title}{labels_elem}
     </div>
   );
+}
+
+export default function Bookshelf() {
+  return (
+    <div className="container bookshelf">
+      <BookshelfEntry name="The Pragmatic Programmer" author="Andrew Hunt, David Thomas" labels={["non-fiction", "software development"]} />
+      <BookshelfEntry name="Designing Data-Intensive Applications" author="Martin Kleppmann" labels={["non-fiction", "data engineering"]} />
+      <BookshelfEntry name="The Manager's Path" author="Camille Fournier" labels={["non-fiction", "management"]} />
+      <BookshelfEntry name="A Thousand Brains" author="Jeff Hawkins" labels={["non-fiction", "neuroscience"]} />
+      <BookshelfEntry name="Algorithms for Decision Making" author="Mykel J. Kochenderfer, Tim A. Wheeler, Kyle H. Wray" labels={["non-fiction", "algorithms"]} />
+      <BookshelfEntry name="The Infinite Game" author="Simon Sinek" labels={["non-fiction", "business"]} />
+      <BookshelfEntry name="Thinking, Fast and Slow" author="Daniel Kahneman" labels={["non-fiction", "psychology"]} />
+      <BookshelfEntry name="Getting to Yes" author="Roger Fisher, William Ury, Bruce Patton" labels={["non-fiction", "negotiation"]} />
+      <BookshelfEntry name="Remembrance of Earth's Past series" author="Cixin Liu" labels={["fiction", "science-fiction"]} />
+      <BookshelfEntry name="Project Hail Mary" author="Andy Weir" labels={["fiction", "science-fiction"]} />
+      <BookshelfEntry name="Die Schachnovelle" author="Stefan Zweig" labels={["fiction", "novella"]} />
+      <BookshelfEntry name="A Wild Sheep Chase" author="Haruki Murakami" labels={["fiction", "novel"]} />
+      <BookshelfEntry name="To Kill a Mockingbird" author="Harper Lee" labels={["fiction", "novel"]} />
+      <BookshelfEntry name="The Left Hand of Darkness" author="Ursula K. Le Guin" labels={["fiction", "science-fiction"]} />
+    </div>
+  )
 }
