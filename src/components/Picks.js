@@ -26,7 +26,7 @@ function PickEntry({ labels, name, url }) {
     </div>
 
   return (
-    <div className="pick-entry-row">
+    <div className="content-table-row">
       {name_elem}{labels_elem}{description}
     </div>
   );
@@ -35,7 +35,7 @@ function PickEntry({ labels, name, url }) {
 
 export default function Picks() {
   return (
-    <div className="picks-container">
+    <div className="content-container">
     <PickEntry labels={["search-engine", "browser"]} name="DuckDuckGo" url="https://duckduckgo.com/" />
     <PickEntry labels={["browser"]} name="Firefox" url="https://www.firefox.com/" />
     <PickEntry labels={["os"]} name="Ubuntu" url="" />

@@ -1,10 +1,30 @@
-import {ExternalLinkRunningText} from "../utils/Link";
+import {ExternalLink, ExternalLinkRunningText} from "../utils/Link";
 
-function ProjectEntry({ title, description_elem, url }) {
+function ProjectEntry({ name, desc_text_elem, url, labels = [] }) {
+  let name_elem =
+    <div className="project-name-column">
+      {url ? (
+        ExternalLink(url, name)
+      ) : (
+        <span>{name}</span>
+      )}
+    </div>
+
+  let desc_elem =
+    <div className="project-description-column">
+      {desc_text_elem}
+    </div>
+
+  let labels_elem =
+    <div className="project-labels-column">
+      {labels.map((label, index) => (
+        <span key={index}>{label}</span>
+      ))}
+    </div>
+
   return (
-    <div className="project-card">
-      <h3>{title}</h3>
-      <p>{description_elem}</p>
+    <div className="content-table-row">
+      {name_elem}{labels_elem}{desc_elem}
     </div>
   );
 }
@@ -16,10 +36,9 @@ export default function Projects() {
   );
 
   return (
-    <div className="container projects">
-      <h2>Projects</h2>
+    <div className="content-container">
       <div className="project-list">
-        <ProjectEntry name="Sarcasm Detection" description_elem={sarcasm_desc_elem}/>
+        <ProjectEntry name="Sarcasm Detection" desc_text_elem={sarcasm_desc_elem} labels={["python", "scikit-learn", "nltk"]} url="https://github.com/rpurgstaller/sarcasm-detector"/>
       </div>
     </div>
   );

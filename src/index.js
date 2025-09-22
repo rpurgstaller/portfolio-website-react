@@ -5,6 +5,8 @@ import "./styles/header.scss";
 import "./styles/home.scss";
 import "./styles/picks.scss"
 import "./styles/bookshelf.scss"
+import "./styles/projects.scss"
+import "./styles/about.scss"
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

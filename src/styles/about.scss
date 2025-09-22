@@ -1,0 +1,23 @@
+@use 'shared/responsive';
+
+.about-text-col {
+  width: 55vw;
+
+  @media (max-width: responsive.$breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.about-img-col {
+  width: 45%;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end; /* aligns content to the right */
+  align-items: flex-start;
+  padding-right: 10%;
+
+}
+
+.about-image {
+
+}

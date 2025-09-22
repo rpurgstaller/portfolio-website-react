@@ -14,7 +14,7 @@ function BookshelfEntry({ name, author, labels }) {
     </div>
 
   return (
-    <div className="bookshelf-entry-row">
+    <div className="content-table-row">
       {title}{labels_elem}
     </div>
   );
@@ -22,7 +22,7 @@ function BookshelfEntry({ name, author, labels }) {
 
 export default function Bookshelf() {
   return (
-    <div className="container bookshelf">
+    <div className="content-container">
       <BookshelfEntry name="The Pragmatic Programmer" author="Andrew Hunt, David Thomas" labels={["non-fiction", "software development"]} />
       <BookshelfEntry name="Designing Data-Intensive Applications" author="Martin Kleppmann" labels={["non-fiction", "data engineering"]} />
       <BookshelfEntry name="The Manager's Path" author="Camille Fournier" labels={["non-fiction", "management"]} />

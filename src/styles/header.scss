@@ -1,16 +1,21 @@
 @use 'shared/colors';
 @use 'shared/typo';
+@use 'shared/responsive';
 
 .header-container {
   padding: 0;
-  height: 120px;
 }
 
-.header-container-left {
-  width: 25%;
+.header-container-logo {
+  width: 35%;
   float: left;
   text-align: center;
   display: flex;
+}
+
+.header-container-nav {
+  width: 65%;
+  float: right;
 }
 
 .header-logo {
@@ -23,7 +28,7 @@
 }
 
 .nav {
-  margin: 0 0 0 0.5rem;
+  margin: 0 0 0 3rem;
   font-size: 1.1rem;
   color: colors.$link-inactive;
 }
@@ -39,9 +44,32 @@
   bottom: -5px;
 }
 
-.header-container-right {
-  width: 75%;
-  float: right;
+@media (max-width: responsive.$breakpoint-mobile) {
+  .header-container {
+    width: 100%;
+  }
+
+  .header-container-logo {
+    text-align: left;
+    width: 100%;
+  }
+
+  .header-container-nav {
+    width: 100%;
+    float: left;
+    text-align: center;
+    border-top: 1px solid colors.$light-gray;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .navbar {
+    text-align: left;
+    margin-top: 0.5rem;
+  }
+
+  .nav {
+    margin: 0 2rem 0 0;
+    font-size: 0.9rem;
+  }
 }
-
-

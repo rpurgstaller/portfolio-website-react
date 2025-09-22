@@ -11,8 +11,6 @@ export function ExternalLink(url, text) {
 
 export function ExternalLinkRunningText(url, text) {
   return (
-    <Link to={url} target="_blank" rel="noopener noreferrer" className="link-inline">
-      {text}
-    </Link>
+    <Link to={url} target="_blank" rel="noopener noreferrer" className="link-inline">{text}</Link>
   );
 }
