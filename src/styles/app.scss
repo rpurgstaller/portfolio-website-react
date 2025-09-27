@@ -16,6 +16,13 @@ body {
   a{
     color: colors.$text;
   }
+
+  @media screen and (max-width: responsive.$breakpoint-mobile){
+    body{
+      font-size: typo.$font-size-base;
+    }
+
+  }
 }
 
 .link-border {
@@ -83,20 +90,22 @@ $max-width: 1078px;
   max-width: $max-width;
 
   @media (max-width: responsive.$breakpoint-mobile) {
+    width: 100%;
     padding: $padding-mobile;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
   }
 }
 
 .content-container {
   width: 100%;
-  padding-top: 40px;
+  padding-top: 8rem;
 
   @media (max-width: responsive.$breakpoint-mobile) {
     width: 100%;
-    padding-top: 40px;
+    padding-top: 4.5rem;
     flex-direction: column;
   }
 }

@@ -7,6 +7,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Picks from "./components/Picks";
 import Bookshelf from "./components/Bookshelf";
+import Copyright from "./components/Copyright";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/picks" element={<Picks />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
         </Routes>
+        <Copyright/>
       </div>
     </Router>
   );

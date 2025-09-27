@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="content-container">
+    <div className="content-container about-container">
       <div className="column-about about-text-col">
         <p>
           Hey there, I'm Roman. Developer, Tech lead and Product Manager. My first

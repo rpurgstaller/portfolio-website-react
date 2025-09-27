@@ -21,8 +21,17 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="background-container">
-        <div className="background-image" style={{backgroundImage: "url(/main_silhouette.webP)"}}/>
+      <div className="silhouette-container">
+        <div className="social-icons-container-mobile">
+          <a href="https://github.com/rpurgstaller" target="_blank" rel="noreferrer"><FaGithub className="svg-icon"/></a>
+          <a href="https://hackerrank.com/romanpurgstaller" target="_blank" rel="noreferrer"><FaHackerrank className="svg-icon" /></a>
+          <a href="https://stackoverflow.com/users/1618893/roman-purgstaller?tab=profile" target="_blank" rel="noreferrer"><FaStackOverflow className="svg-icon"/></a>
+          <a href="https://linkedin.com/in/roman-purgstaller-828b33229" target="_blank" rel="noreferrer"><FaLinkedin className="svg-icon" /></a>
+          <a href="mailto:roman.purgstaller@tuta.com"><MdEmail className="svg-icon" /></a>
+        </div>
+        <div className="silhouette-img-container">
+          <img src={"/silhouette.webP"} alt="silhouette" className="silhouette"/>
+        </div>
       </div>
     </div>
   );

@@ -1,23 +1,14 @@
 @use 'shared/responsive';
+@use 'shared/colors';
+
+.about-container {
+  border-bottom: 1px solid colors.$light-gray;
+}
 
 .about-text-col {
-  width: 55vw;
+  width: 65%;
 
   @media (max-width: responsive.$breakpoint-mobile) {
     width: 100%;
   }
-}
-
-.about-img-col {
-  width: 45%;
-  text-align: right;
-  display: flex;
-  justify-content: flex-end; /* aligns content to the right */
-  align-items: flex-start;
-  padding-right: 10%;
-
-}
-
-.about-image {
-
 }

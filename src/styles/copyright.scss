@@ -1,0 +1,23 @@
+@use 'shared/colors';
+
+.back-to-top-txt {
+  cursor: pointer;
+}
+
+.copyright-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: colors.$secondary-text;
+}
+
+.copyright-txt {
+
+}
+
+.copyright-btn {
+
+}
