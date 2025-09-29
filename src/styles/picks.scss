@@ -1,9 +1,6 @@
 @use 'shared/typo';
 @use 'shared/colors';
 
-.picks-container {
-}
-
 .pick-entry-row {
   display: flex;
   gap: 1rem;
@@ -37,4 +34,5 @@
 
 .description-column {
   flex-grow: 1;
+  min-width: 600px;
 }

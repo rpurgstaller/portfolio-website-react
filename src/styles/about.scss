@@ -6,7 +6,8 @@
 }
 
 .about-text-col {
-  width: 65%;
+  width: 100%;
+  max-width: 640px;
 
   @media (max-width: responsive.$breakpoint-mobile) {
     width: 100%;

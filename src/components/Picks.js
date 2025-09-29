@@ -34,37 +34,45 @@ function PickEntry({ labels, name, url, desc_txt_elem }) {
 export default function Picks() {
   let desc_keepass =
     <span>
-      KeePass has been my go-to password manager for years. I really appreciate its simplicity and local-first approach.
+      My go-to password manager for years. I prefer KeePass's local-first approach.
       Syncing between devices requires a bit of manual effort, but it works smoothly when combined with Syncthing.
     </span>
 
   let desc_vs_code =
     <span>
-      VS Code has become my editor for... well, (almost) everything! It feels lightweight and intuitive to use,
-      which makes it a great fit for most of my daily tasks. For larger projects, though, I currently prefer PyCharm.
+      I use VS Code for most of my daily tasks. For larger projects, though, I currently prefer PyCharm.
     </span>
 
   let desc_pycharm =
     <span>
-      I love using PyCharm with my current stack — Python, Angular, and PostgreSQL. This is where most of my daily programming happens.
+      I use PyCharm mostly with my current stack — Python, Angular, and PostgreSQL.
       While I mostly prefer PyCharm for larger projects, I also started using it for side projects and smaller experiments.
     </span>
 
-  let desc_bruno =
+  let bruno_desc =
     <span>
-      Best API client out there for me!
+      I mostly prefer Bruno because because it's Git native.
+    </span>
+
+  let pg_admin_desc =
+    <span>
+      While I write most of my queries in PyCharm, I prefer using pgAdmin for more complex queries and for analyzing execution plans.
+    </span>
+
+  let tex_studio_desc =
+    <span>
+      I'm using TeXstudio since university.
     </span>
 
   let desc_hn = <span></span>
 
   return (
     <div className="content-container">
-    <PickEntry labels={["search-engine", "browser"]} name="DuckDuckGo" url="https://duckduckgo.com/" desc_txt_elem={desc_keepass} />
     <PickEntry labels={["ide", "development"]} name="VS Code" url="https://code.visualstudio.com/" desc_txt_elem={desc_vs_code} />
     <PickEntry labels={["ide", "development"]} name="PyCharm" url="https://www.jetbrains.com/pycharm/" desc_txt_elem={desc_pycharm} />
-    <PickEntry labels={["api-testing", "development"]} name="Bruno" url="https://www.usebruno.com/" desc_txt_elem={desc_keepass} />
-    <PickEntry labels={["ide", "database", "development"]} name="pgAdmin" url="https://www.pgadmin.org/" desc_txt_elem={desc_keepass} />
-    <PickEntry labels={["ide", "latex", "development"]} name="TeXstudio" url="https://www.texstudio.org/" desc_txt_elem={desc_keepass} />
+    <PickEntry labels={["api-testing", "development"]} name="Bruno" url="https://www.usebruno.com/" desc_txt_elem={bruno_desc} />
+    <PickEntry labels={["ide", "database", "development"]} name="pgAdmin" url="https://www.pgadmin.org/" desc_txt_elem={pg_admin_desc} />
+    <PickEntry labels={["ide", "latex", "development"]} name="TeXstudio" url="https://www.texstudio.org/" desc_txt_elem={tex_studio_desc} />
 
     <PickEntry labels={["email", "calendar"]} name="Tuta" url="https://mail.tutanota.com/" desc_txt_elem={desc_keepass} />
     <PickEntry labels={["organization"]} name="Obsidian" url="https://obsidian.md/" desc_txt_elem={desc_keepass} />
