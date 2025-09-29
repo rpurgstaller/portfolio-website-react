@@ -1,16 +1,18 @@
-import React from 'react';
-import {TfiArrowUp} from "react-icons/tfi";
+import React from "react";
+import { TfiArrowUp } from "react-icons/tfi";
 
 const ScrollToTopText = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
   return (
-    <p className="back-to-top-txt" onClick={scrollToTop}><TfiArrowUp/> Back to Top</p>
+    <p className="back-to-top-txt" onClick={scrollToTop}>
+      <TfiArrowUp /> Back to Top
+    </p>
   );
 };
 
@@ -21,7 +23,7 @@ export default function Copyright() {
         <p>© Roman Purgstaller</p>
       </div>
       <div className="copyright-btn">
-        <ScrollToTopText/>
+        <ScrollToTopText />
       </div>
     </div>
   );

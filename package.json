@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://{username}.github.io/{repo-name}",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -24,7 +25,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +51,7 @@
     "css-loader": "^7.1.2",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
+    "gh-pages": "^6.3.0",
     "prettier": "^3.6.2",
     "style-loader": "^4.0.0",
     "tailwindcss": "^4.0.17"

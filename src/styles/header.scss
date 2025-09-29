@@ -1,6 +1,6 @@
-@use 'shared/colors';
-@use 'shared/typo';
-@use 'shared/responsive';
+@use "shared/colors";
+@use "shared/typo";
+@use "shared/responsive";
 
 .header-container {
   padding: 0;
@@ -33,8 +33,8 @@
   color: colors.$link-inactive;
 }
 
-.nav.active{
-    color: colors.$text;
+.nav.active {
+  color: colors.$text;
 }
 
 .header-logo::before {

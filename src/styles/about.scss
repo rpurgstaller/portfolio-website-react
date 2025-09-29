@@ -1,5 +1,5 @@
-@use 'shared/responsive';
-@use 'shared/colors';
+@use "shared/responsive";
+@use "shared/colors";
 
 .about-container {
   border-bottom: 1px solid colors.$light-gray;

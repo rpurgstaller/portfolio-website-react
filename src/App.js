@@ -21,7 +21,7 @@ function App() {
           <Route path="/picks" element={<Picks />} />
           <Route path="/bookshelf" element={<Bookshelf />} />
         </Routes>
-        <Copyright/>
+        <Copyright />
       </div>
     </Router>
   );

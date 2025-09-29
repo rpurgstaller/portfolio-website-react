@@ -1,6 +1,6 @@
-@use 'shared/typo';
-@use 'shared/colors';
-@use 'shared/responsive';
+@use "shared/typo";
+@use "shared/colors";
+@use "shared/responsive";
 
 html,
 body {
@@ -13,15 +13,14 @@ body {
     line-height: 150%;
   }
 
-  a{
+  a {
     color: colors.$text;
   }
 
-  @media screen and (max-width: responsive.$breakpoint-mobile){
-    body{
+  @media screen and (max-width: responsive.$breakpoint-mobile) {
+    body {
       font-size: typo.$font-size-base;
     }
-
   }
 }
 
@@ -82,7 +81,6 @@ body {
 $padding-mobile: 2rem 1rem 0.5rem 1rem;
 $padding-desktop: 4rem 2rem 1rem 2rem;
 $max-width: 1078px;
-
 
 .app-layout {
   margin: 0 auto;

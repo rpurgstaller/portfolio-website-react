@@ -1,5 +1,5 @@
-@use 'shared/typo';
-@use 'shared/colors';
+@use "shared/typo";
+@use "shared/colors";
 
 .container-home {
   display: flex;
@@ -13,8 +13,8 @@
   flex: 6;
 }
 .introduction-content {
-    padding-top: 20%;
-    padding-bottom: 10%;
+  padding-top: 20%;
+  padding-bottom: 10%;
 }
 
 .introduction-text {
@@ -51,7 +51,7 @@
 }
 
 .social-icons-container-mobile {
-    display: none;
+  display: none;
 }
 
 @media (max-width: 768px) {
