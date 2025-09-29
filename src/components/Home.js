@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
 import { FaHackerrank } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import silhouette from "./../images/silhouette.webP"
 
 export default function Home() {
   return (
@@ -83,7 +84,7 @@ export default function Home() {
         </div>
         <div className="silhouette-img-container">
           <img
-            src={"/silhouette.webP"}
+            src={silhouette}
             alt="silhouette"
             className="silhouette"
           />
