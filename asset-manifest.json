@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/%7Brepo-name%7D/static/css/main.52ead14f.css",
-    "main.js": "/%7Brepo-name%7D/static/js/main.db112dee.js",
-    "static/media/silhouette.webP": "/%7Brepo-name%7D/static/media/silhouette.b4db1f2d4d6c84437bd6.webP",
-    "index.html": "/%7Brepo-name%7D/index.html",
-    "main.52ead14f.css.map": "/%7Brepo-name%7D/static/css/main.52ead14f.css.map",
-    "main.db112dee.js.map": "/%7Brepo-name%7D/static/js/main.db112dee.js.map"
+    "main.css": "/portfolio-react/static/css/main.52ead14f.css",
+    "main.js": "/portfolio-react/static/js/main.0f51bdc1.js",
+    "static/media/silhouette.webP": "/portfolio-react/static/media/silhouette.b4db1f2d4d6c84437bd6.webP",
+    "index.html": "/portfolio-react/index.html",
+    "main.52ead14f.css.map": "/portfolio-react/static/css/main.52ead14f.css.map",
+    "main.0f51bdc1.js.map": "/portfolio-react/static/js/main.0f51bdc1.js.map"
   },
   "entrypoints": [
     "static/css/main.52ead14f.css",
-    "static/js/main.db112dee.js"
+    "static/js/main.0f51bdc1.js"
   ]
 }
