@@ -65,6 +65,31 @@ export default function Picks() {
 
   let tex_studio_desc = <span>I'm using TeXstudio since university.</span>;
 
+  let desc_tutanota = (
+    <span>
+      I think the focus on privacy and security is really cool Even though the product is still early
+      stages it mostly works for what I need.
+    </span>
+  );
+
+  let desc_obsidian = (
+    <span>
+      I use Obsidian for note-taking and organizing my personal life. If you want to find out more about how I use
+      obsidian, check out my{" "}
+      {ExternalLink(
+        "",
+        "TODO - insert link here"
+      )}.
+    </span>
+ );
+
+  let desc_autohotkey = (
+    <span>
+      Since I use a US keyboard layout, I rely on AutoHotkey primarily for typing German umlauts (ä, ö, ü, ß) on Windows.
+      On my personal Linux PC, I use AutoKey for the same purpose.
+    </span>
+  );
+
   let desc_hn = <span></span>;
 
   return (
@@ -104,13 +129,13 @@ export default function Picks() {
         labels={["email", "calendar"]}
         name="Tuta"
         url="https://mail.tutanota.com/"
-        desc_txt_elem={desc_keepass}
+        desc_txt_elem={desc_tutanota}
       />
       <PickEntry
         labels={["organization"]}
         name="Obsidian"
         url="https://obsidian.md/"
-        desc_txt_elem={desc_keepass}
+        desc_txt_elem={desc_obsidian}
       />
       <PickEntry
         labels={["password-manager"]}
@@ -122,7 +147,7 @@ export default function Picks() {
         labels={["automation"]}
         name="Autohotkey"
         url="https://www.autohotkey.com/"
-        desc_txt_elem={desc_keepass}
+        desc_txt_elem={desc_autohotkey}
       />
       <PickEntry
         labels={["sync"]}

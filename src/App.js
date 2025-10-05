@@ -11,7 +11,7 @@ import Copyright from "./components/Copyright";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio-react">
       <div className="App app-layout">
         <Header />
         <Routes>
