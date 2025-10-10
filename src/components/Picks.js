@@ -95,7 +95,7 @@ export default function Picks() {
   return (
     <div className="content-container">
       <div className="content-intro">
-        This is a list of my favorite tools and resources that I use on a daily basis.
+        Some of my favorite tools, podcasts and other resources
       </div>
       <div className="content-table">
         <PickEntry

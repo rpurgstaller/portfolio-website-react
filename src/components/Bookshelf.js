@@ -28,7 +28,7 @@ export default function Bookshelf() {
   return (
     <div className="content-container">
       <div className="content-intro">
-        This is a list of my favorite books
+        Some of my favourite books
       </div>
       <div className="content-table">
         <BookshelfEntry

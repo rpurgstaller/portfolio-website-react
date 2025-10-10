@@ -24,6 +24,7 @@ export default function Header() {
               className={({ isActive }) =>
                 isActive ? "link-border nav active" : "link-border nav"
               }
+              title="Projects"
             >
               projects
             </NavLink>

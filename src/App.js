@@ -8,19 +8,22 @@ import Projects from "./components/Projects";
 import Picks from "./components/Picks";
 import Bookshelf from "./components/Bookshelf";
 import Copyright from "./components/Copyright";
+import Layout from "./Layout";
 
 function App() {
   return (
     <Router basename="/portfolio-react">
       <div className="App app-layout">
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/picks" element={<Picks />} />
-          <Route path="/bookshelf" element={<Bookshelf />} />
-        </Routes>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/picks" element={<Picks />} />
+            <Route path="/bookshelf" element={<Bookshelf />} />
+          </Routes>
+        </Layout>
         <Copyright />
       </div>
     </Router>

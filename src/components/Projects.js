@@ -46,7 +46,7 @@ export default function Projects() {
   return (
     <div className="content-container">
       <div className="content-intro">
-        This is a list of my projects
+        Selected projects I've worked on
       </div>
       <div className="project-list content-table">
         <ProjectEntry

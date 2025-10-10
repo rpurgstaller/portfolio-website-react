@@ -4,38 +4,30 @@ export default function About() {
   return (
     <div className="content-container about-container">
       <div className="column-about about-text-col">
-        <p>Hey there, I'm Roman. Developer, Tech lead and Product Manager.</p>
+        <h1>Hey there, I'm Roman</h1>
         <p>
-          My journey into programming began high school, where I played around
-          with HTML and CSS. Later, I found my passion with tech and coding in
-          University, where I learned about algorithms, Touring machines and
-          pointers. I still remember the moment it all clicked while reading a
-          C/C++ book — realizing the endless possibilities of programming and
-          how much fun it is.
+          I'm a Tech lead and Product Manager based in Graz, Austria. After finishing my studies at Graz University of Technology,
+          I had the opportunity to work in different fields as a software engineer, architect and product owner.
+          While I am fascinated with the variety of possibilities in software engineering, I especially have a strong personal interest in web development and data analytics.
         </p>
         <p>
-          A few years into my career as a software engineer, I got the
-          opportunity to lead a small team of developers as a product owner. I
-          had no idea what I was getting into. While this would have been a
-          challenging transition for any engineer, 2 out of 4 engineers in my
-          team left the company before I started taking over the team and the
-          number of bugs was in the triple digits. I was clearly out of my
-          depth! But the team was fantastic, and I was surrounded by amazing
-          people who supported me. Over time, we found our rhythm and started
-          delivering. What stands out most from that period is how much I
-          enjoyed mentoring other developers and working closely with the team
-          to find amazing solutions to cool problems. Even today, I believe that
-          the things I've learned there will benefit me for the rest of my life.
+          When I'm not coding, I'm propably climbing, hiking, on a run or play a game of chess. Since Sports climbing
+          became one of my biggest passions the last few years, I also give courses as a sports climbing instructor at
+          the <a href="https://www.c-a-c.at/">city adventure center</a> in Graz.
         </p>
         <p>
-          Currently, I work as a tech lead and product manager, combining my
-          technical expertise with my passion for leadership. While my role now
-          involves more strategic thinking, product management and meetings, I
-          still enjoy building the occasional feature, fixing a bug or creating
-          solutions for exciting problems.
+          Currently, I work as a tech lead and product manager, combining my technical expertise with my passion for leadership.
+          While my work now involves more strategic thinking, leadership and mentoring, I still enjoy building features, fixing bugs or creating solutions for exciting problems.
         </p>
+        <h1>Key skills</h1>
+        <div>
+
+        </div>
+        <h1>My values</h1>
+        <div>
+
+        </div>
       </div>
-      <div className="column-about about-img-col"></div>
     </div>
   );
 }
