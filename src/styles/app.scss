@@ -108,6 +108,16 @@ $max-width: 1078px;
   }
 }
 
+.content-table {
+  padding-top: 2.5rem;
+}
+
+.content-intro {
+    font-size: typo.$font-size-normal;
+    color: colors.$secondary-text;
+    line-height: typo.$line-height-block-text;
+}
+
 .content-table-row {
   display: flex;
   gap: 1rem;

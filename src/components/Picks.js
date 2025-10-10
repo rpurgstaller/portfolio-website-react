@@ -94,92 +94,98 @@ export default function Picks() {
 
   return (
     <div className="content-container">
-      <PickEntry
-        labels={["ide", "development"]}
-        name="VS Code"
-        url="https://code.visualstudio.com/"
-        desc_txt_elem={desc_vs_code}
-      />
-      <PickEntry
-        labels={["ide", "development"]}
-        name="PyCharm"
-        url="https://www.jetbrains.com/pycharm/"
-        desc_txt_elem={desc_pycharm}
-      />
-      <PickEntry
-        labels={["api-testing", "development"]}
-        name="Bruno"
-        url="https://www.usebruno.com/"
-        desc_txt_elem={bruno_desc}
-      />
-      <PickEntry
-        labels={["ide", "database", "development"]}
-        name="pgAdmin"
-        url="https://www.pgadmin.org/"
-        desc_txt_elem={pg_admin_desc}
-      />
-      <PickEntry
-        labels={["ide", "latex", "development"]}
-        name="TeXstudio"
-        url="https://www.texstudio.org/"
-        desc_txt_elem={tex_studio_desc}
-      />
+      <div className="content-intro">
+        This is a list of my favorite tools and resources that I use on a daily basis.
+      </div>
+      <div className="content-table">
+        <PickEntry
+          labels={["ide", "development"]}
+          name="VS Code"
+          url="https://code.visualstudio.com/"
+          desc_txt_elem={desc_vs_code}
+        />
+        <PickEntry
+          labels={["ide", "development"]}
+          name="PyCharm"
+          url="https://www.jetbrains.com/pycharm/"
+          desc_txt_elem={desc_pycharm}
+        />
+        <PickEntry
+          labels={["api-testing", "development"]}
+          name="Bruno"
+          url="https://www.usebruno.com/"
+          desc_txt_elem={bruno_desc}
+        />
+        <PickEntry
+          labels={["ide", "database", "development"]}
+          name="pgAdmin"
+          url="https://www.pgadmin.org/"
+          desc_txt_elem={pg_admin_desc}
+        />
+        <PickEntry
+          labels={["ide", "latex", "development"]}
+          name="TeXstudio"
+          url="https://www.texstudio.org/"
+          desc_txt_elem={tex_studio_desc}
+        />
 
-      <PickEntry
-        labels={["email", "calendar"]}
-        name="Tuta"
-        url="https://mail.tutanota.com/"
-        desc_txt_elem={desc_tutanota}
-      />
-      <PickEntry
-        labels={["organization"]}
-        name="Obsidian"
-        url="https://obsidian.md/"
-        desc_txt_elem={desc_obsidian}
-      />
-      <PickEntry
-        labels={["password-manager"]}
-        name="KeePass"
-        url="https://keepass.info/"
-        desc_txt_elem={desc_keepass}
-      />
-      <PickEntry
-        labels={["automation"]}
-        name="Autohotkey"
-        url="https://www.autohotkey.com/"
-        desc_txt_elem={desc_autohotkey}
-      />
-      <PickEntry
-        labels={["sync"]}
-        name="Syncthing"
-        url="https://syncthing.net/"
-        desc_txt_elem={desc_keepass}
-      />
+        <PickEntry
+          labels={["email", "calendar"]}
+          name="Tuta"
+          url="https://mail.tutanota.com/"
+          desc_txt_elem={desc_tutanota}
+        />
+        <PickEntry
+          labels={["organization"]}
+          name="Obsidian"
+          url="https://obsidian.md/"
+          desc_txt_elem={desc_obsidian}
+        />
+        <PickEntry
+          labels={["password-manager"]}
+          name="KeePass"
+          url="https://keepass.info/"
+          desc_txt_elem={desc_keepass}
+        />
+        <PickEntry
+          labels={["automation"]}
+          name="Autohotkey"
+          url="https://www.autohotkey.com/"
+          desc_txt_elem={desc_autohotkey}
+        />
+        <PickEntry
+          labels={["sync"]}
+          name="Syncthing"
+          url="https://syncthing.net/"
+          desc_txt_elem={desc_keepass}
+        />
 
-      <PickEntry
-        labels={["news"]}
-        name="Hacker News"
-        url="https://news.ycombinator.com/"
-        desc_txt_elem={desc_hn}
-      />
-      <PickEntry
-        labels={["podcast"]}
-        name="Darknet Diaries"
-        url="https://darknetdiaries.com/"
-        desc_txt_elem={desc_keepass}
-      />
-      <PickEntry
-        labels={["podcast"]}
-        name="Hardcore History Series"
-        url="https://www.dancarlin.com/hardcore-history-series/"
-        desc_txt_elem={desc_keepass}
-      />
-      <PickEntry
-        labels={["podcast"]}
-        name="NRD Info: Synapsen (german)"
-        url="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html"
-        desc_txt_elem={desc_keepass}
-      />
+        <PickEntry
+          labels={["news"]}
+          name="Hacker News"
+          url="https://news.ycombinator.com/"
+          desc_txt_elem={desc_hn}
+        />
+        <PickEntry
+          labels={["podcast"]}
+          name="Darknet Diaries"
+          url="https://darknetdiaries.com/"
+          desc_txt_elem={desc_keepass}
+        />
+        <PickEntry
+          labels={["podcast"]}
+          name="Hardcore History Series"
+          url="https://www.dancarlin.com/hardcore-history-series/"
+          desc_txt_elem={desc_keepass}
+        />
+        <PickEntry
+          labels={["podcast"]}
+          name="NRD Info: Synapsen (german)"
+          url="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html"
+          desc_txt_elem={desc_keepass}
+        />
+      </div>
+
     </div>
   );
 }

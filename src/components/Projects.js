@@ -45,7 +45,10 @@ export default function Projects() {
 
   return (
     <div className="content-container">
-      <div className="project-list">
+      <div className="content-intro">
+        This is a list of my projects
+      </div>
+      <div className="project-list content-table">
         <ProjectEntry
           name="Sarcasm Detection"
           desc_text_elem={sarcasm_desc_elem}
