@@ -1,4 +1,4 @@
-import { ExternalLink, ExternalLinkRunningText } from "../utils/Link";
+import { ExternalLink } from "../utils/Link";
 
 function PickEntry({ labels, name, url, desc_txt_elem }) {
   let name_elem = (
@@ -53,7 +53,7 @@ export default function Picks() {
   );
 
   let bruno_desc = (
-    <span>I mostly prefer Bruno because because it's Git native.</span>
+    <span>Really cool and lightweight API client. I mostly prefer Bruno because because it's Git native. </span>
   );
 
   let pg_admin_desc = (
@@ -62,8 +62,6 @@ export default function Picks() {
       more complex queries and for analyzing execution plans.
     </span>
   );
-
-  let tex_studio_desc = <span>I'm using TeXstudio since university.</span>;
 
   let desc_tutanota = (
     <span>
@@ -90,13 +88,25 @@ export default function Picks() {
     </span>
   );
 
-  let desc_hn = <span></span>;
+  let desc_syncthing = (
+    <span>
+      I use Syncthing to sync files between my devices. It's a cool alternative to cloud service, especially for
+      sensitive data like my KeePass database.
+    </span>
+  );
+
+  let desc_darknet_diaries = (
+    <span>
+      Darknet Diaries covers topics like hacking, cybercrime, and internet privacy.
+      I really enjoy the storytelling style and thriller-like atmosphere of the episodes.
+    </span>
+  );
 
   return (
     <div className="content-container">
-      <div className="content-intro">
+      <h1>
         Some of my favorite tools, podcasts and other resources
-      </div>
+      </h1>
       <div className="content-table">
         <PickEntry
           labels={["ide", "development"]}
@@ -122,13 +132,6 @@ export default function Picks() {
           url="https://www.pgadmin.org/"
           desc_txt_elem={pg_admin_desc}
         />
-        <PickEntry
-          labels={["ide", "latex", "development"]}
-          name="TeXstudio"
-          url="https://www.texstudio.org/"
-          desc_txt_elem={tex_studio_desc}
-        />
-
         <PickEntry
           labels={["email", "calendar"]}
           name="Tuta"
@@ -157,35 +160,15 @@ export default function Picks() {
           labels={["sync"]}
           name="Syncthing"
           url="https://syncthing.net/"
-          desc_txt_elem={desc_keepass}
-        />
-
-        <PickEntry
-          labels={["news"]}
-          name="Hacker News"
-          url="https://news.ycombinator.com/"
-          desc_txt_elem={desc_hn}
+          desc_txt_elem={desc_syncthing}
         />
         <PickEntry
           labels={["podcast"]}
           name="Darknet Diaries"
           url="https://darknetdiaries.com/"
-          desc_txt_elem={desc_keepass}
-        />
-        <PickEntry
-          labels={["podcast"]}
-          name="Hardcore History Series"
-          url="https://www.dancarlin.com/hardcore-history-series/"
-          desc_txt_elem={desc_keepass}
-        />
-        <PickEntry
-          labels={["podcast"]}
-          name="NRD Info: Synapsen (german)"
-          url="https://www.ndr.de/nachrichten/info/synapsen-ein-wissenschaftspodcast,podcast2994.html"
-          desc_txt_elem={desc_keepass}
+          desc_txt_elem={desc_darknet_diaries}
         />
       </div>
-
     </div>
   );
 }

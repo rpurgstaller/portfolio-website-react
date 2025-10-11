@@ -1,5 +1,3 @@
-import { ExternalLink } from "../utils/Link";
-
 function BookshelfEntry({ name, author, labels }) {
   let title = (
     <div className="bookshelf-title-column">
@@ -27,9 +25,7 @@ function BookshelfEntry({ name, author, labels }) {
 export default function Bookshelf() {
   return (
     <div className="content-container">
-      <div className="content-intro">
-        Some of my favourite books
-      </div>
+      <h1>Some of my favourite books</h1>
       <div className="content-table">
         <BookshelfEntry
           name="The Pragmatic Programmer"

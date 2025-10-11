@@ -26,7 +26,7 @@ export default function Header() {
               }
               title="Projects"
             >
-              projects
+              Projects
             </NavLink>
             <NavLink
               to="/picks"
@@ -34,7 +34,7 @@ export default function Header() {
                 isActive ? "link-border nav active" : "link-border nav"
               }
             >
-              picks
+              Picks
             </NavLink>
             <NavLink
               to="/bookshelf"
@@ -42,7 +42,7 @@ export default function Header() {
                 isActive ? "link-border nav active" : "link-border nav"
               }
             >
-              bookshelf
+              Bookshelf
             </NavLink>
             <NavLink
               to="/about"
@@ -50,7 +50,7 @@ export default function Header() {
                 isActive ? "link-border nav active" : "link-border nav"
               }
             >
-              about{" "}
+              About
             </NavLink>
           </nav>
         </div>

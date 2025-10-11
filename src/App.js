@@ -15,15 +15,15 @@ function App() {
     <Router basename="/portfolio-react">
       <div className="App app-layout">
         <Header />
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/picks" element={<Picks />} />
-            <Route path="/bookshelf" element={<Bookshelf />} />
-          </Routes>
-        </Layout>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/picks" element={<Picks />} />
+              <Route path="/bookshelf" element={<Bookshelf />} />
+            </Routes>
+          </Layout>
         <Copyright />
       </div>
     </Router>

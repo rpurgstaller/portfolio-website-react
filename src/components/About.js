@@ -21,12 +21,19 @@ export default function About() {
         </p>
         <h1>Key skills</h1>
         <div>
-
+          <ul>
+            <li>Building apps and services that drive business value and foster growth</li>
+            <li>Diving into business processes and complex domains to deliver valuable features </li>
+            <li>Creating robust and scalable systems with a focus on code that's easy to reuse and evolve</li>
+            <li>Developing data-driven applications and crafting meaningful visualizations to support informed decision-making</li>
+            <li>Growing and empowering engineering teams within an agile environment</li>
+            <li>Fostering a learning culture through honest and compassionate feedback</li>
+          </ul>
         </div>
-        <h1>My values</h1>
-        <div>
+        {/*<h1>My values</h1>*/}
+        {/*<div>*/}
 
-        </div>
+        {/*</div>*/}
       </div>
     </div>
   );
