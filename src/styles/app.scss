@@ -41,11 +41,36 @@ body {
 
   h1 {
     font-size: typo.$font-size-heading;
-    color: colors.$primary-text;
     margin: 0.67em 0;
     line-height: typo.$line-height-block-text;
-
+    font-weight: bold;
+    Color: colors.$secondary-text;
   }
+
+  h2 {
+    font-size: typo.$font-size-sub-heading;
+    color: colors.$primary-text;
+    margin: typo.$margin-h2 0;
+    line-height: typo.$line-height-block-text;
+    font-weight: normal;
+  }
+}
+
+.label-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.label-container span {
+  display: inline-block;
+  border: 1px solid lightgrey;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  background-color: #f9f9f9;
+  white-space: nowrap;
 }
 
 .link-border {
@@ -99,6 +124,30 @@ body {
   &:hover {
     color: colors.$link-inline-hover;
   }
+}
+
+.svg-icon {
+  width: 32px;
+  height: 32px;
+  fill: colors.$link-inactive;
+  transition: fill 600ms ease-out;
+  margin: 0 0.9rem 0 0;
+}
+
+.svg-icon-small {
+  width: 24px;
+  height: 24px;
+  fill: colors.$link-inactive;
+  transition: fill 600ms ease-out;
+  margin: 0 0.9rem 0 0;
+}
+
+.svg-icon:hover {
+  fill: colors.$text;
+}
+
+.svg-icon-small:hover {
+  fill: colors.$text;
 }
 
 $padding-mobile: 2rem 1rem 0.5rem 1rem;

@@ -1,41 +1,33 @@
 @use "shared/typo";
 @use "shared/colors";
 
-.project-entry-row {
+.project-list-container {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.project-list {
+  max-width: 768px;
+}
+
+.project-container {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid colors.$light-gray;
 }
 
-.project-name-column {
-  min-width: 250px;
-}
-
-.project-labels-column {
+.project-title-container {
   display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  min-width: 300px;
+  justify-content: space-between;
+  margin-bottom: 1rem
 }
 
-.project-labels-column span {
-  display: inline-block;
-  border: 1px solid lightgrey;
-  border-radius: 12px;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-  background-color: #f9f9f9;
-  white-space: nowrap;
+.project-title-container a {
+  margin: typo.$margin-h2 0;
 }
 
-.project-description-column {
-  flex-grow: 1;
-
-  p {
-    margin: 0;
-  }
+.project-description-container {
+  margin-top: 1rem;
 }

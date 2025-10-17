@@ -20,20 +20,3 @@
   color: colors.$secondary-text;
   margin-top: 0.2rem;
 }
-
-.bookshelf-labels-column {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  text-align: right;
-}
-
-.bookshelf-labels-column span {
-  display: inline-block;
-  border: 1px solid lightgrey;
-  border-radius: 12px;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-  background-color: #f9f9f9;
-  white-space: nowrap;
-}

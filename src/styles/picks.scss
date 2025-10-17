@@ -15,21 +15,8 @@
   min-width: 250px;
 }
 
-.picks-labels-column {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  min-width: 200px;
-}
-
-.picks-labels-column span {
-  display: inline-block;
-  border: 1px solid lightgrey;
-  border-radius: 12px;
-  padding: 4px 8px;
-  font-size: 0.85rem;
-  background-color: #f9f9f9;
-  white-space: nowrap;
+.picks-label-column {
+  min-width: 250px;
 }
 
 .description-column {

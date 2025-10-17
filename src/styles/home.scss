@@ -26,18 +26,6 @@
   padding-top: 3rem;
 }
 
-.svg-icon {
-  width: 32px;
-  height: 32px;
-  fill: colors.$link-inactive;
-  transition: fill 600ms ease-out;
-  margin: 0 0.9rem 0 0;
-}
-
-.svg-icon:hover {
-  fill: colors.$text;
-}
-
 .silhouette-container {
   flex: 4;
   display: flex;

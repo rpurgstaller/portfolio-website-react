@@ -1,4 +1,4 @@
-import { ExternalLink } from "../utils/Link";
+import {ExternalLink, ExternalLinkRunningText} from "../utils/Link";
 
 function PickEntry({ labels, name, url, desc_txt_elem }) {
   let name_elem = (
@@ -8,7 +8,7 @@ function PickEntry({ labels, name, url, desc_txt_elem }) {
   );
 
   let labels_elem = (
-    <div className="picks-labels-column">
+    <div className="label-container picks-label-column">
       {labels.map((label, index) => (
         <span key={index}>{label}</span>
       ))}
@@ -53,7 +53,7 @@ export default function Picks() {
   );
 
   let bruno_desc = (
-    <span>Really cool and lightweight API client. I mostly prefer Bruno because because it's Git native. </span>
+    <span>Really cool and lightweight API client. I especially like Bruno because because it's Git native. </span>
   );
 
   let pg_admin_desc = (
@@ -72,11 +72,11 @@ export default function Picks() {
 
   let desc_obsidian = (
     <span>
-      I use Obsidian for note-taking and organizing my personal life. If you want to find out more about how I use
-      obsidian, check out my{" "}
-      {ExternalLink(
-        "",
-        "TODO - insert link here"
+      I use Obsidian for note-taking and organizing my personal life. The way I use obsidian is inspired by the zettelkasten method
+      as well as the methods and philosophies behind {" "}
+      {ExternalLinkRunningText(
+        "https://github.com/bramses/bramses-highly-opinionated-vault-2023",
+        "bramses highly opinionated vault"
       )}.
     </span>
  );
@@ -105,7 +105,7 @@ export default function Picks() {
   return (
     <div className="content-container">
       <h1>
-        Some of my favorite tools, podcasts and other resources
+        Picks
       </h1>
       <div className="content-table">
         <PickEntry

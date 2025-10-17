@@ -7,7 +7,7 @@ function BookshelfEntry({ name, author, labels }) {
   );
 
   let labels_elem = (
-    <div className="bookshelf-labels-column">
+    <div className="label-container">
       {labels.map((label, index) => (
         <span key={index}>{label}</span>
       ))}
@@ -25,7 +25,7 @@ function BookshelfEntry({ name, author, labels }) {
 export default function Bookshelf() {
   return (
     <div className="content-container">
-      <h1>Some of my favourite books</h1>
+      <h1>Books</h1>
       <div className="content-table">
         <BookshelfEntry
           name="The Pragmatic Programmer"
