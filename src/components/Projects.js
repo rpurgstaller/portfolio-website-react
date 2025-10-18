@@ -39,6 +39,8 @@ function ProjectEntry({ name, desc_text_elem, url, labels = [] }) {
 
 export default function Projects() {
   let tweepy = ExternalLinkRunningText("https://www.tweepy.org/", "tweepy");
+  let sarcasm_detector_github = "https://github.com/rpurgstaller/sarcasm-detector"
+  let link_sarcasm_github = ExternalLinkRunningText(sarcasm_detector_github, "github");
   let sarcasm_desc_elem = (
     <p>
       A sarcasm detector, oh, what a useful invention! For this project I used
@@ -47,8 +49,8 @@ export default function Projects() {
       european migrant crisis in 2015, hence I found a lot of tweets complaining
       about politicians and journalists. Unfortunately, I can hardly blame the
       dreadful results of this study on the European Union. Working on this
-      project was a lot of fun and I got hooked on data analytics. You can read
-      more about it in the paper on github.
+      project was a lot of fun though, and I got hooked on data analytics. You can read
+      more about it in the paper on {" "} {link_sarcasm_github}.
     </p>
   );
 
@@ -56,10 +58,23 @@ export default function Projects() {
     <p>
       I wanted a simple script to analyze my monthly expenses to better understand my spending habits.
       Using a basic rule engine, the script categorizes transactions into groups such as groceries, living, leisure, etc.
-      Currently, it generates a bar plot of my expenses per category based on the rules I've defined.
+      Currently, it simply generates a bar plot of my expenses per category based on the rules I've defined.
     </p>
   );
 
+  let python_angular_desc_elem = (
+    <p>
+      A simple web app built with Angular, Flask, and Neo4j. The app supports user registration, form validation and a admin user panel.
+      I wanted to improve my full-stack development skills and dive into graph databases. I really enjoyed working with cypher
+      and would love to do another project with neo4j in the future.
+    </p>
+  );
+
+  let monthly_exp_desc_elem = (
+    <p>
+
+    </p>
+  );
   return (
     <div className="content-container project-list-container">
       <div>
@@ -68,14 +83,26 @@ export default function Projects() {
           <ProjectEntry
             name="Fat Cats With Polars"
             desc_text_elem={fat_cats_desc_elem}
-            labels={["python", "polars", "uv"]}
+            labels={["python", "polars", "plotly"]}
             url="https://github.com/rpurgstaller/fat-cats-with-polars"
+          />
+          <ProjectEntry
+            name="Monthly Expense Analyzer"
+            desc_text_elem={monthly_exp_desc_elem}
+            labels={["python", "pandas", "plotly", "sqlite3"]}
+            url="https://github.com/rpurgstaller/monthly-expenses"
+          />
+          <ProjectEntry
+            name="Full Stack CRUD Application with Angular, Python Flask and Neo4j"
+            desc_text_elem={python_angular_desc_elem}
+            labels={["python", "angular", "flask", "neo4j", "py2neo"]}
+            url="https://github.com/rpurgstaller/angular-login-and-signup"
           />
           <ProjectEntry
             name="Sarcasm Detection"
             desc_text_elem={sarcasm_desc_elem}
             labels={["python", "scikit-learn", "nltk"]}
-            url="https://github.com/rpurgstaller/sarcasm-detector"
+            url={sarcasm_detector_github}
           />
         </div>
       </div>
