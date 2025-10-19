@@ -43,7 +43,7 @@ body {
     font-size: typo.$font-size-heading;
     margin: 0.67em 0;
     line-height: typo.$line-height-block-text;
-    font-weight: bold;
+    font-weight: typo.$font-weight-medium;
     Color: colors.$secondary-text;
   }
 
