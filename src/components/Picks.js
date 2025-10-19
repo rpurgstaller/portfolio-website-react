@@ -73,7 +73,7 @@ export default function Picks() {
   let desc_obsidian = (
     <span>
       I use Obsidian for note-taking and organizing my personal life. The way I use obsidian is inspired by the zettelkasten method
-      as well as the methods and philosophies behind {" "}
+      as well as some of the methods and philosophies behind {" "}
       {ExternalLinkRunningText(
         "https://github.com/bramses/bramses-highly-opinionated-vault-2023",
         "bramses highly opinionated vault"
@@ -90,7 +90,7 @@ export default function Picks() {
 
   let desc_syncthing = (
     <span>
-      I use Syncthing to sync files between my devices. It's a cool alternative to cloud service, especially for
+      I use Syncthing to sync files between my devices. It's a cool alternative to cloud-services, especially for
       sensitive data like my KeePass database.
     </span>
   );
@@ -98,7 +98,7 @@ export default function Picks() {
   let desc_darknet_diaries = (
     <span>
       Darknet Diaries covers topics like hacking, cybercrime, and internet privacy.
-      I really enjoy the storytelling style and thriller-like atmosphere of the episodes.
+      I really like the storytelling style and thriller-like atmosphere of the episodes.
     </span>
   );
 

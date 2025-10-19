@@ -72,7 +72,7 @@ export default function Projects() {
 
   let monthly_exp_desc_elem = (
     <p>
-
+      A simple expense tracking and visualization tool using pandas, plotly and sqlite3 to keep track of my monthly expenses.
     </p>
   );
   return (
@@ -87,7 +87,7 @@ export default function Projects() {
             url="https://github.com/rpurgstaller/fat-cats-with-polars"
           />
           <ProjectEntry
-            name="Monthly Expense Analyzer"
+            name="Thrifty Panda - Monthly Expense Analyzer"
             desc_text_elem={monthly_exp_desc_elem}
             labels={["python", "pandas", "plotly", "sqlite3"]}
             url="https://github.com/rpurgstaller/monthly-expenses"
