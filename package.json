@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://rpurgstaller.github.io/portfolio-react/",
+  "homepage": "https://rpurgstaller.github.io/portfolio-website-react/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

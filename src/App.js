@@ -12,7 +12,7 @@ import Layout from "./Layout";
 
 function App() {
   return (
-    <Router basename="/portfolio-react">
+    <Router>
       <div className="App app-layout">
         <Header />
           <Layout>
