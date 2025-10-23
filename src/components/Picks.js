@@ -29,6 +29,8 @@ function PickEntry({ labels, name, url, desc_txt_elem }) {
 }
 
 export default function Picks() {
+  let link_autokey = ExternalLinkRunningText("https://github.com/autokey/autokey", "autokey");
+
   let desc_keepass = (
     <span>
       My go-to password manager for years. I prefer KeePass's local-first
@@ -53,7 +55,7 @@ export default function Picks() {
   );
 
   let bruno_desc = (
-    <span>Really cool and lightweight API client. I especially like Bruno because because it's Git native. </span>
+    <span>Really cool and lightweight API client. I especially like Bruno because it's Git native. </span>
   );
 
   let pg_admin_desc = (
@@ -65,8 +67,8 @@ export default function Picks() {
 
   let desc_tutanota = (
     <span>
-      I think the focus on privacy and security is really cool Even though the product is still early
-      stages it mostly works for what I need.
+      I think the focus on privacy and security is really cool. Even though the product is still in its early
+      stages, it mostly works for what I need.
     </span>
   );
 
@@ -84,7 +86,7 @@ export default function Picks() {
   let desc_autohotkey = (
     <span>
       Since I use a US keyboard layout, I rely on AutoHotkey primarily for typing German umlauts (ä, ö, ü, ß) on Windows.
-      On my personal Linux PC, I use AutoKey for the same purpose.
+      On my personal Linux PC, I use {" "} {link_autokey} for the same purpose.
     </span>
   );
 
@@ -99,6 +101,13 @@ export default function Picks() {
     <span>
       Darknet Diaries covers topics like hacking, cybercrime, and internet privacy.
       I really like the storytelling style and thriller-like atmosphere of the episodes.
+    </span>
+  );
+
+  let stack_overflow_podcast_desc = (
+    <span>
+      I really enjoy listening to the Stack Overflow Podcast from time to time. I've learned a punch of interesting stuff
+      about software engineering, especially about team culture and leadership.
     </span>
   );
 
@@ -163,10 +172,16 @@ export default function Picks() {
           desc_txt_elem={desc_syncthing}
         />
         <PickEntry
-          labels={["podcast"]}
+          labels={["podcast", "security", "privacy"]}
           name="Darknet Diaries"
           url="https://darknetdiaries.com/"
           desc_txt_elem={desc_darknet_diaries}
+        />
+        <PickEntry
+          labels={["podcast", "software-engineering"]}
+          name="The Stack Overflow Podcast"
+          url="https://stackoverflow.blog/podcast/"
+          desc_txt_elem={stack_overflow_podcast_desc}
         />
       </div>
     </div>

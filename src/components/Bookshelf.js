@@ -35,12 +35,12 @@ export default function Bookshelf() {
         <BookshelfEntry
           name="Designing Data-Intensive Applications"
           author="Martin Kleppmann"
-          labels={["non-fiction", "data engineering"]}
+          labels={["non-fiction", "data-engineering", "software-architecture"]}
         />
         <BookshelfEntry
           name="The Manager's Path"
           author="Camille Fournier"
-          labels={["non-fiction", "management"]}
+          labels={["non-fiction", "management", "leadership"]}
         />
         <BookshelfEntry
           name="A Thousand Brains"
@@ -55,7 +55,7 @@ export default function Bookshelf() {
         <BookshelfEntry
           name="The Infinite Game"
           author="Simon Sinek"
-          labels={["non-fiction", "business"]}
+          labels={["non-fiction", "business", "leadership"]}
         />
         <BookshelfEntry
           name="Thinking, Fast and Slow"
@@ -65,7 +65,7 @@ export default function Bookshelf() {
         <BookshelfEntry
           name="Getting to Yes"
           author="Roger Fisher, William Ury, Bruce Patton"
-          labels={["non-fiction", "negotiation"]}
+          labels={["non-fiction", "negotiation", "business"]}
         />
         <BookshelfEntry
           name="Remembrance of Earth's Past series"
@@ -96,6 +96,11 @@ export default function Bookshelf() {
           name="The Left Hand of Darkness"
           author="Ursula K. Le Guin"
           labels={["fiction", "science-fiction"]}
+        />
+        <BookshelfEntry
+          name="The Vegetarian"
+          author="Han Kang"
+          labels={["fiction", "novel"]}
         />
       </div>
     </div>

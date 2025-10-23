@@ -45,7 +45,7 @@ export default function Projects() {
     <p>
       A sarcasm detector, oh, what a useful invention! For this project I used
       {" "} {tweepy} to access the twitter api and mine german tweets with the
-      hashtags #sarcasm and #irony. I made this project a while after the
+      hashtags #sarcasm and #irony. I created this project a while after the
       european migrant crisis in 2015, hence I found a lot of tweets complaining
       about politicians and journalists. Unfortunately, I can hardly blame the
       dreadful results of this study on the European Union. Working on this
@@ -73,6 +73,7 @@ export default function Projects() {
   let monthly_exp_desc_elem = (
     <p>
       A simple expense tracking and visualization tool using pandas, plotly and sqlite3 to keep track of my monthly expenses.
+      I've created a small sqlite3 database to store my expenses and use a treemap to visualize where my money goes each month.
     </p>
   );
   return (
