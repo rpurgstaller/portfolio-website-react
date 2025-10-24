@@ -3,8 +3,11 @@
 Thanks for your interest in my website!
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[gh-pages](https://www.npmjs.com/package/gh-pages) was used for deployment. 
 
-Feel free to copy and reuse anything in this repository.
+You can find the live version of the website [here](https://www.rpurgstaller.app).
+
+Feel free to copy and reuse anything in this repository. 
 
 ## Available Scripts
 
