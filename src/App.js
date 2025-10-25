@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Picks from "./components/Picks";
 import Bookshelf from "./components/Bookshelf";
 import Copyright from "./components/Copyright";
+import Practices from "./components/Practices";
 import Layout from "./Layout";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/picks" element={<Picks />} />
               <Route path="/bookshelf" element={<Bookshelf />} />
+              <Route path="/practices" element={<Practices/>} />
             </Routes>
           </Layout>
         <Copyright />
