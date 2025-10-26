@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="content-container">
       <h1>
-        Practices (wip)
+        Practices
       </h1>
       <div className="content-text">
         <p>
@@ -20,29 +20,28 @@ export default function About() {
         <div>
           <h2>Leadership</h2>
           <ul>
-            <li>Remove impediments for the team and foster autonomy</li>
-            <li>Think about what your team needs/Get your hands dirty</li>
-            <li>Honest and kind feedback</li>
-            <li>Mutual trust/Promoting psychological safety</li>
-            <li>(Remote first environments)</li>
+            <li>Foster autonomy: Trust your team to know what needs to be done</li>
+            <li>Know what your team needs and don't be afraid to get your hands dirty</li>
+            <li>Don't avoid difficult conversations: Always provide honest and kind feedback</li>
+            <li>Trust drives performance: A team should feel safe to take risks and make mistakes</li>
           </ul>
         </div>
         <div>
           <h2>Development</h2>
           <ul>
-            <li>Test driven development/Code that is easy to test - build testability from the very beginning</li>
-            <li>Good code is easy to change</li>
-            <li>Write software that is "good enough" but don't leave (/fix) "broken windows" (bad designs, wrong decisions, poor code) immediately</li>
-            <li>Strong tooling (uv stack/AI)</li>
+            <li>Build testability into your code from the start and apply test-driven development</li>
+            <li>Write adaptable code: Good code is easy to change and easy to test</li>
+            <li>Fix broken windows: Deliver software that’s “good enough,” but address poor design, bad decisions, and weak code immediately</li>
+            <li>Invest in automation: Strong tooling helps you and your team scale</li>
           </ul>
         </div>
         <div>
           <h2>Product & Strategy</h2>
           <ul>
-            <li>Lean/MVP/PoC/experiments</li>
-            <li>Really understand what users need, dig beyond the surface</li>
-            <li>Manage your time - Understanding the difference between urgency and importance</li>
-            <li>Work data driven</li>
+            <li>Understand your users: Dig beyond surface needs and always validate your assumptions</li>
+            <li>Learn fast: Use MVPs, PoCs, and experiments to iterate quickly</li>
+            <li>Manage your time: Understand the difference between urgency and importance</li>
+            <li>Make decisions based on data, not assumptions</li>
           </ul>
 
         </div>
