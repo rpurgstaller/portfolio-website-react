@@ -79,7 +79,7 @@ export default function Projects() {
   return (
     <div className="content-container project-list-container">
       <div>
-        <h1 className="project-title">Selected projects</h1>
+        <h1 className="project-title">Personal projects</h1>
         <div className="project-list content-table">
           <ProjectEntry
             name="Fat Cats With Polars"

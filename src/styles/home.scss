@@ -38,10 +38,6 @@
   height: auto;
 }
 
-.social-icons-container-mobile {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .container-home {
     flex-direction: column;
@@ -58,15 +54,9 @@
     padding: 0;
   }
 
-  .social-icons-container {
-    display: none;
-  }
-
   .silhouette-container {
     width: 100%;
-    height: auto;
     padding: 2rem;
-    align-items: center;
   }
 
   .silhouette-img-container {
@@ -77,16 +67,15 @@
   .silhouette {
     margin: 0;
     padding: 0 0 0 0;
-    width: 50%;
+    width: 60vw;
     object-fit: contain;
   }
 
-  .social-icons-container-mobile {
+  .social-icons-container {
     display: flex;
-    flex-direction: column;
   }
 
   .svg-icon {
-    margin: 0 0 1rem 0;
+    //margin: 0 1rem 1rem 0;
   }
 }

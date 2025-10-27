@@ -19,7 +19,7 @@
 }
 
 .header-logo {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: colors.$primary-text;
 }
 
@@ -28,8 +28,8 @@
 }
 
 .nav {
-  margin: 0 0 0 3rem;
-  font-size: 1.1rem;
+  margin: 0 0 0 1.5rem;
+  font-size: 1.05rem;
   color: colors.$link-inactive;
 }
 
@@ -65,10 +65,12 @@
 
   .navbar {
     text-align: left;
-    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
   }
 
   .nav {
-    margin: 0 2rem 0 0;
+    margin: 0 0.7rem 0 0;
   }
 }
