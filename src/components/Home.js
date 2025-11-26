@@ -42,7 +42,7 @@ export default function Home() {
             >
               <FaLinkedin className="svg-icon" />
             </a>
-            <a href="mailto:roman.purgstaller@tuta.com">
+            <a href="mailto:mail@rpurgstaller.app">
               <MdEmail className="svg-icon" />
             </a>
           </div>
