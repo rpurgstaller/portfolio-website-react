@@ -1,8 +1,15 @@
 import React from "react";
+import { FaTimes, FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
+  const [open, setOpen] = React.useState(false);
+
+  function handleClick() {
+    setOpen(!open);
+  }
+
   return (
     <header className="header-container">
         <div className="header-container-logo">
@@ -17,8 +24,8 @@ export default function Header() {
             Roman Purgstaller
           </NavLink>
         </div>
-        <div className="header-container-nav">
-          <nav className="navbar">
+        <div className={"header-container-nav" }>
+          <nav className={"navbar" + (open ? " open" : "")}>
             <NavLink
               to="/projects"
               className={({ isActive }) =>
@@ -63,6 +70,9 @@ export default function Header() {
             </NavLink>
           </nav>
         </div>
+        <button onClick={handleClick} className="header-nav-button">
+            {open ? <FaTimes /> : <FaBars />}
+        </button>
     </header>
   );
 }

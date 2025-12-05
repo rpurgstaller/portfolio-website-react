@@ -8,7 +8,7 @@ export default function About() {
         <div>
           <p>
             I'm a Tech lead and Product Manager based in Graz, Austria. After completing my studies at Graz University of Technology,
-            I had the opportunity to work in different fields as a software engineer, architect and product owner.
+            I had the opportunity to work in different fields as a software engineer, product owner and tech lead.
             While I am fascinated by the wide range of possibilities in software engineering, I am particularly interested in web development and data analytics.
           </p>
           <p>
