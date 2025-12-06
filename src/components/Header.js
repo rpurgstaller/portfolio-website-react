@@ -1,7 +1,7 @@
 import React from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+import { NavItems } from "./NavItems";
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
@@ -24,54 +24,30 @@ export default function Header() {
             Roman Purgstaller
           </NavLink>
         </div>
-        <div className={"header-container-nav" }>
+        <div className="header-container-nav">
           <nav className={"navbar" + (open ? " open" : "")}>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) =>
-                isActive ? "link-border nav active" : "link-border nav"
-              }
-              title="Projects"
-            >
-              Projects
-            </NavLink>
-            <NavLink
-              to="/practices"
-              className={({ isActive }) =>
-                isActive ? "link-border nav active" : "link-border nav"
-              }
-              title="Practices"
-            >
-              Practices
-            </NavLink>
-            <NavLink
-              to="/picks"
-              className={({ isActive }) =>
-                isActive ? "link-border nav active" : "link-border nav"
-              }
-            >
-              Picks
-            </NavLink>
-            <NavLink
-              to="/bookshelf"
-              className={({ isActive }) =>
-                isActive ? "link-border nav active" : "link-border nav"
-              }
-            >
-              Bookshelf
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? "link-border nav active" : "link-border nav"
-              }
-            >
-              About
-            </NavLink>
+            <button onClick={handleClick} className="header-nav-button-close responsive-btn">
+                <FaTimes className="responsive-btn-icon"/>
+            </button>
+            {NavItems.map((item, index) => {
+              return (
+                <NavLink
+                  key={index}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    isActive ? "link-border nav active" : "link-border nav"
+                  }
+                  title={item.title}
+                  onClick={handleClick}
+                >
+                  {item.title}
+                </NavLink>
+              );
+            })}
           </nav>
         </div>
-        <button onClick={handleClick} className="header-nav-button">
-            {open ? <FaTimes /> : <FaBars />}
+        <button onClick={handleClick} className="header-nav-button responsive-btn">
+            <FaBars className="responsive-btn-icon"/>
         </button>
     </header>
   );
