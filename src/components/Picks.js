@@ -111,6 +111,15 @@ export default function Picks() {
     </span>
   );
 
+  let link_seg = ExternalLinkRunningText("https://www.engguidebook.com/", "Software Engineer's Guidebook");
+
+  let desc_pragmatic_engineer = (
+    <span>
+      The Pragmatic Engineer is a really cool podcast about software engineering, leadership, and career development.
+      I also enjoyed the {link_seg} by Gergely Orosz.
+    </span>
+  );
+
   return (
     <div className="content-container">
       <h1>
@@ -172,16 +181,22 @@ export default function Picks() {
           desc_txt_elem={desc_syncthing}
         />
         <PickEntry
-          labels={["podcast", "security", "privacy"]}
-          name="Darknet Diaries"
-          url="https://darknetdiaries.com/"
-          desc_txt_elem={desc_darknet_diaries}
-        />
-        <PickEntry
           labels={["podcast", "software-engineering"]}
           name="The Stack Overflow Podcast"
           url="https://stackoverflow.blog/podcast/"
           desc_txt_elem={stack_overflow_podcast_desc}
+        />
+        <PickEntry
+          labels={["podcast", "software-engineering"]}
+          name="The Pragmatic Engineer"
+          url="https://www.pragmaticengineer.com/"
+          desc_txt_elem={desc_pragmatic_engineer}
+        />
+        <PickEntry
+          labels={["podcast", "security", "privacy"]}
+          name="Darknet Diaries"
+          url="https://darknetdiaries.com/"
+          desc_txt_elem={desc_darknet_diaries}
         />
       </div>
     </div>

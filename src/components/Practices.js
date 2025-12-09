@@ -6,7 +6,7 @@ export default function About() {
       </h1>
       <div className="content-text">
         <p>
-          Having worked as a developer, product owner, tech lead, and product manager for over a decade, I've collaborated
+          Having worked as a developer, tech lead, product owner, and product manager for over a decade, I've collaborated
           with diverse teams and experienced a variety of working styles. Along the way, I've had the privilege of
           meeting many talented and inspiring people who have enriched both my professional and personal life.
         </p>
@@ -31,7 +31,7 @@ export default function About() {
           <ul>
             <li>Build testability into your code from the start and apply test-driven development</li>
             <li>Write adaptable code: Good code is easy to change and easy to test</li>
-            <li>Fix broken windows: Deliver software that’s “good enough,” but address poor design, bad decisions, and weak code immediately</li>
+            <li>Fix broken windows: Deliver software that’s “good enough”, but address poor design, bad decisions, and weak code immediately</li>
             <li>Invest in automation: Strong tooling helps you and your team scale</li>
           </ul>
         </div>
@@ -41,6 +41,7 @@ export default function About() {
             <li>Understand your users: Dig beyond surface needs and always validate your assumptions</li>
             <li>Learn fast: Use MVPs, PoCs, and experiments to iterate quickly</li>
             <li>Manage your time: Understand the difference between urgency and importance</li>
+            <li>It's all about change: Building great software isn't enough. You also need to integrate it into the company's culture.</li>
             <li>Make decisions based on data, not assumptions</li>
           </ul>
 

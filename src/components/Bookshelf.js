@@ -78,6 +78,11 @@ export default function Bookshelf() {
           labels={["fiction", "science-fiction"]}
         />
         <BookshelfEntry
+          name="Flowers for Algernon"
+          author="Daniel Keyes"
+          labels={["fiction", "science-fiction"]}
+        />
+        <BookshelfEntry
           name="Die Schachnovelle"
           author="Stefan Zweig"
           labels={["fiction", "novella"]}

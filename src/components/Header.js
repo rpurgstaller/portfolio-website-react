@@ -26,9 +26,6 @@ export default function Header() {
         </div>
         <div className="header-container-nav">
           <nav className={"navbar" + (open ? " open" : "")}>
-            <button onClick={handleClick} className="header-nav-button-close responsive-btn">
-                <FaTimes className="responsive-btn-icon"/>
-            </button>
             {NavItems.map((item, index) => {
               return (
                 <NavLink
@@ -46,9 +43,6 @@ export default function Header() {
             })}
           </nav>
         </div>
-        <button onClick={handleClick} className="header-nav-button responsive-btn">
-            <FaBars className="responsive-btn-icon"/>
-        </button>
     </header>
   );
 }
