@@ -3,12 +3,9 @@ import { radarData } from "./RadarData";
 import { color } from "d3";
 
 export default function Radar() {
+    // checkout: https://opensource.zalando.com/tech-radar/# + https://www.thoughtworks.com/radar
     const { quadrants, rings, blips } = radarData;
-//     return (
-//         <div className="content-container">
-//             <svg id="radar"></svg>
-//         </div>
-// //     
+
     const size = 1000;
     const center = size / 2;
     const backgroundColor = "#ffffffff";
