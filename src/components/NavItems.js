@@ -12,6 +12,10 @@ export const NavItems = [
     title: "Picks",
   },
   {
+    to: "/radar",
+    title: "Radar",
+  },
+  {
     to: "/bookshelf",
     title: "Bookshelf",
   },

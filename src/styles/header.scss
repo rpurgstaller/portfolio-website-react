@@ -93,7 +93,8 @@
 
   .navbar {
     text-align: left;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .nav {
@@ -101,9 +102,3 @@
   }
 }
 
-@media (max-width: responsive.$breakpoint-mobile-s) {
-  .navbar {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
