@@ -11,8 +11,11 @@ export const radarData = {
     { name: "Hold", radius: 3 },
   ],
   blips: [
-    { name: "React", quadrant: 3, ring: 0, moved: 0 },
-    { name: "Docker", quadrant: 1, ring: 1, moved: 1 },
+    { name: "React", quadrant: 2, ring: 0 },
+    { name: "Docker", quadrant: 0, ring: 1 },
+    { name: "Kubernetes", quadrant: 1, ring: 2 },
+    { name: "Bruno", quadrant: 3, ring: 0 },
+    { name: "some platform", quadrant: 2, ring: 1}
     // Add more blips as needed
   ],
 };
