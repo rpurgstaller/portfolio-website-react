@@ -1,3 +1,5 @@
 {
-    "github.copilot.chat.languageContext.typescript.enabled": false
+    "github.copilot.chat.languageContext.typescript.enabled": false,
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }
