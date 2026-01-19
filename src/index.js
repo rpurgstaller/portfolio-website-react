@@ -8,6 +8,7 @@ import "./styles/bookshelf.scss";
 import "./styles/projects.scss";
 import "./styles/about.scss";
 import "./styles/copyright.scss";
+import "./styles/radar.scss";
 import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

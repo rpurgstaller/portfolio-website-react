@@ -1,13 +1,15 @@
 import { radarData } from "./RadarData";
+import { useState } from "react";
 
-const size = 1000;
-const border = size / 2;
+const width = 1048;
+const height = 800;
+// const border = sizeX / 2;
 
-const ringSize = 140;
+const ringSize = 110;
 const centerOffset = 60;
 
 const ringsCfg = radarData.rings;
-const radii = ringsCfg.map(ring => ring.radius * ringSize);
+const radii = ringsCfg.map(ring => ring.radiusMultiplier * ringSize);
 
 const quadrantSepSize = 30;
 const quadrantBorderSize = quadrantSepSize/2;
@@ -174,78 +176,62 @@ function Segment(quadrant, ring) {
     }
 }
 
-const CustomBlip = ({ ring, quadrant, name, color, idx }) => {
-    let segment = Segment(quadrant, ring);
-
-    let point = segment.randomPoint();
-
-    let x = point.x;
-    let y = point.y;
-
-    console.log({name, quadrant, ring, x, y});
+const CustomBlip = ({ ring, quadrant, name, color, idx, onTooltipShow, onTooltipHide, x, y }) => {
     return (
         <circle
             key={idx}
+            className="radar-blip"
             cx={x}
             cy={y}
             r="5"
             fill={color}
-        >
-            <title>{name}</title>
-        </circle>
+            onMouseEnter={() => onTooltipShow({name, x, y})}
+            onMouseLeave={() => onTooltipHide()}
+        />
     );
 }
 
-export default function Radar() {
-    // checkout: https://opensource.zalando.com/tech-radar/# + https://www.thoughtworks.com/radar
-    // Try svg tooltip: www.npmjs.com/package/react-svg-tooltip
-    const { quadrants, rings, blips } = radarData;
-    
-    const backgroundColor = "#ffffffff";
-    const lineStroke = "#ccc";
+const RadarSVG = ({blips, rings, quadrants}) => {
+    const [tooltip, setTooltip] = useState(null);
 
     const radius = rings.length * ringSize;
 
+    const handleTooltipShow = (data) => {
+        setTooltip(data);
+    };
+
+    const handleTooltipHide = () => {
+        setTooltip(null);
+    };
+
     return (
-        <div className="content-container">
-            <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-                <g transform={`translate(${border},${border})scale(1)`}>
+        <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="radar-svg">
+                <g transform={`translate(${width/2},${height/2})scale(1)`}>
                     {/* Background */}
                     <rect
-                        key="background"
-                        x="0"
-                        y="0"
-                        width={size}
-                        height={size}
-                        fill= {backgroundColor}
+                        key="radar-background"
+                        className="radar-background"
+                        width={width}
+                        height={height}
                     />
                     {/* Draw rings */}
                     {
                         rings.map((ring, i) => (
                             <circle
-                                key={i}
-                                cx="0"
-                                cy="0"
-                                r={ring.radius * ringSize}
-                                fill="none"
-                                stroke={lineStroke}
-                                strokeWidth="1"
+                                key={`radar-ring-${i}`}
+                                className="radar-ring"
+                                r={ring.radius}
                             />
                     ))}
                     {/* Draw quadrants */}
                     {
                         quadrants.map((quadrant, i) => (
-                            <g key={i}>
-                                {/* <path
-                                    d={`M${center},${center} L${center + (i % 2 === 0 ? 1 : -1) * 300},${center} A300,300 0 0,${i < 2 ? 0 : 1} ${center + (i % 2 === 0 ? -1 : 1) * 300},${center} Z`}
-                                    fill={quadrant.color}
-                                    opacity="0.1"
-                                /> */}
+                            <g key={`radar-quadrant-group-${i}`}>
                                 <text
-                                    key={"t"+i}
-                                    x={(i % 2 === 0 ? -border+50 : border-50)}
-                                    y={(i < 2 ? -border+50 : border-50)}
-                                    textAnchor={(i % 2 === 0 ? "start" : "end")}
+                                    key={`radar-quadrant-label-${i}`}
+                                    className={`radar-quadrant-label quadrant-${i}`}
+                                    x={quadrant.x}
+                                    y={quadrant.y}
                                     fill={quadrant.color}
                                 >
                                     {quadrant.name}
@@ -255,41 +241,38 @@ export default function Radar() {
                     }
                     {/*separate quadrants*/}
                     {
-                        <g>
-                            <rect key="x1" x={-border} y={-quadrantBorderSize} width={size} height={quadrantSepSize} fill={backgroundColor} />
-                            <rect key="x2" x={-quadrantBorderSize} y={-border} width={quadrantSepSize} height={size} fill={backgroundColor} />
+                        <g key="radar-separators">
+                            <rect key="radar-separator-rect-0" className="radar-quadrant-separator" x={-width/2} y={-quadrantBorderSize} width={width} height={quadrantSepSize} />
+                            <rect key="radar-separator-rect-1" className="radar-quadrant-separator" x={-quadrantBorderSize} y={-height/2} width={quadrantSepSize} height={height} />
                             
-                            <line key="y1" x1={-quadrantBorderSize} y1={-quadrantBorderSize} x2={-radius} y2={-quadrantBorderSize} stroke={lineStroke}/>
-                            <line key="y2" x1={quadrantBorderSize} y1={-quadrantBorderSize} x2={radius} y2={-quadrantBorderSize} stroke={lineStroke}/>
-                            <line key="y3" x1={-quadrantBorderSize} y1={quadrantBorderSize} x2={-radius} y2={quadrantBorderSize} stroke={lineStroke}/>
-                            <line key="y4" x1={quadrantBorderSize} y1={quadrantBorderSize} x2={radius} y2={quadrantBorderSize} stroke={lineStroke}/>
+                            <line key="radar-separator-line-0" className="radar-separator-line" x1={-quadrantBorderSize} y1={-quadrantBorderSize} x2={-radius} y2={-quadrantBorderSize} />
+                            <line key="radar-separator-line-1" className="radar-separator-line" x1={quadrantBorderSize} y1={-quadrantBorderSize} x2={radius} y2={-quadrantBorderSize} />
+                            <line key="radar-separator-line-2" className="radar-separator-line" x1={-quadrantBorderSize} y1={quadrantBorderSize} x2={-radius} y2={quadrantBorderSize} />
+                            <line key="radar-separator-line-3" className="radar-separator-line" x1={quadrantBorderSize} y1={quadrantBorderSize} x2={radius} y2={quadrantBorderSize} />
 
-                            <line key="z1" x1={-quadrantBorderSize} y1={-quadrantBorderSize} x2={-quadrantBorderSize} y2={-radius} stroke={lineStroke}/>
-                            <line key="z2" x1={quadrantBorderSize} y1={-quadrantBorderSize} x2={quadrantBorderSize} y2={-radius} stroke={lineStroke}/>
-                            <line key="z3" x1={-quadrantBorderSize} y1={quadrantBorderSize} x2={-quadrantBorderSize} y2={radius} stroke={lineStroke}/>
-                            <line key="z4" x1={quadrantBorderSize} y1={quadrantBorderSize} x2={quadrantBorderSize} y2={radius} stroke={lineStroke}/>
+                            <line key="radar-separator-line-4" className="radar-separator-line" x1={-quadrantBorderSize} y1={-quadrantBorderSize} x2={-quadrantBorderSize} y2={-radius} />
+                            <line key="radar-separator-line-5" className="radar-separator-line" x1={quadrantBorderSize} y1={-quadrantBorderSize} x2={quadrantBorderSize} y2={-radius} />
+                            <line key="radar-separator-line-6" className="radar-separator-line" x1={-quadrantBorderSize} y1={quadrantBorderSize} x2={-quadrantBorderSize} y2={radius} />
+                            <line key="radar-separator-line-7" className="radar-separator-line" x1={quadrantBorderSize} y1={quadrantBorderSize} x2={quadrantBorderSize} y2={radius} />
                         </g>     
                     }
                     {/* Label rings} */}
                     {
                         rings.map((ring, i) => (
-                            <g>
+                            <g key={`radar-ring-labels-${i}`}>
                                 <text
-                                    key={"ring_txt_-"+i}
-                                    x={(i==0 ? (ring.radius/2 * ringSize) * -1 : (rings[i-1].radius + 0.4) * ringSize * -1)}
-                                    y={quadrantSepSize/2 - 16/2}
-                                    textAnchor="middle"
-                                    fill={"#0d161f"}
-                                    fontSize="16px"
+                                    key={`radar-ring-label-left-${i}`}
+                                    className="radar-ring-label"
+                                    x={ring.labelX * -1}
+                                    y={ring.labelY}
                                 >
                                     {ring.name}
                                 </text>
                                 <text
-                                    key={"ring_txt_"+i}
-                                    x={(i==0 ? (ring.radius/2 * ringSize) : (rings[i-1].radius + 0.4) * ringSize)}
-                                    y={quadrantSepSize/2 - 16/2}
-                                    textAnchor="middle"
-                                    fill={"#0d161f"}
+                                    key={`radar-ring-label-right-${i}`}
+                                    className="radar-ring-label"
+                                    x={ring.labelX}
+                                    y={ring.labelY}
                                 >
                                     {ring.name}
                                 </text>
@@ -297,17 +280,79 @@ export default function Radar() {
                             </g>
                     ))}
                     {/* Draw blips */}
-                    {blips.map((blip, idx) => (
-                        <CustomBlip  
-                            ring={blip.ring}
-                            name={blip.name}
-                            color={quadrants[blip.quadrant].color}
-                            idx={idx}
-                            quadrant={blip.quadrant}
-                        />
-                    ))}
+                    {blips.map((blip, idx) => {
+                        return (
+                            <CustomBlip  
+                                ring={blip.ring}
+                                name={blip.name}
+                                color={quadrants[blip.quadrant].color}
+                                idx={idx}
+                                quadrant={blip.quadrant}
+                                onTooltipShow={handleTooltipShow}
+                                onTooltipHide={handleTooltipHide}
+                                x={blip.x}
+                                y={blip.y}
+                            />
+                        );
+                    })}
+                    {/* Render tooltip */}
+                    {tooltip && (
+                        <g key="radar-tooltip">
+                            <rect
+                                key="radar-tooltip-background"
+                                className="radar-tooltip-background"
+                                x={tooltip.x + 10}
+                                y={tooltip.y - 20}
+                                width={tooltip.name.length * 7 + 16}
+                                height={24}
+                            />
+                            <text
+                                key="radar-tooltip-text"
+                                className="radar-tooltip"
+                                x={tooltip.x + 18}
+                                y={tooltip.y - 5}
+                            >
+                                {tooltip.name}
+                            </text>
+                        </g>
+                    )}
                 </g>
             </svg>
+    )
+};
+
+export default function Radar() {
+    // checkout: https://opensource.zalando.com/tech-radar/# + https://www.thoughtworks.com/radar
+    // Try svg tooltip: www.npmjs.com/package/react-svg-tooltip
+    
+    const { quadrants, rings, blips } = radarData;
+    
+    blips.forEach((blip, idx) => {
+        const segment = Segment(blip.quadrant, blip.ring);
+        const point = segment.randomPoint();
+        blip.x = point.x;
+        blip.y = point.y;
+    });
+
+    rings.forEach((ring, i) => {
+        ring.radius = ring.radiusMultiplier * ringSize;
+        ring.labelX = (i==0 ? (ring.radiusMultiplier/2 * ringSize) : (rings[i-1].radiusMultiplier + 0.4) * ringSize);
+        ring.labelY = quadrantSepSize/2 - 16/2;
+    });
+
+    quadrants.forEach((quadrant, i) => {
+        quadrant.x = (i % 2 === 0 ? -(width/2) + 50 : (width/2) - 50);
+        quadrant.y = (i < 2 ? -(height/2) + 50 : (height/2) - 50);
+    });
+
+    return (
+        <div className="content-container">
+            <RadarSVG 
+                blips={blips} 
+                rings={rings} 
+                quadrants={quadrants} 
+            />
+            
         </div>
     );
     

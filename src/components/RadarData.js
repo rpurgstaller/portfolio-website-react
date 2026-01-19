@@ -6,9 +6,9 @@ export const radarData = {
     { name: "Languages & Frameworks", color: "#990099" },
   ],
   rings: [
-    { name: "Adopt", radius: 1.4 },
-    { name: "Assess", radius: 2.2 },
-    { name: "Hold", radius: 3 },
+    { name: "Adopt", radiusMultiplier: 1.4 },
+    { name: "Assess", radiusMultiplier: 2.2 },
+    { name: "Hold", radiusMultiplier: 3 },
   ],
   blips: [
     {
@@ -80,6 +80,18 @@ export const radarData = {
       description:
         "I use Syncthing to sync files between my devices. It's a cool alternative to cloud-services, " +
         "especially for sensitive data like my KeePass database.",
+    },
+    {
+      name: "omnitools",
+      quadrant: 1,
+      ring: 0,
+      description: "",
+    },
+    {
+      name: "prism.tools",
+      quadrant: 1,
+      ring: 0,
+      description: "",
     },
     {
       name: "The Stack Overflow Podcast",

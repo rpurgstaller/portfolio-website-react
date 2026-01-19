@@ -1,0 +1,67 @@
+@import './shared/colors';
+@import './shared/responsive';
+@import './shared/typo';
+
+.radar-svg {
+  width: 100%;
+  height: auto;
+}
+
+.radar-background {
+  fill: #ffffffff;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1;
+}
+
+.radar-ring-label {
+  fill: #0d161f;
+  font-size: 16px;
+  text-anchor: middle;
+}
+
+.radar-quadrant-separator {
+  fill: #ffffffff;
+}
+
+.radar-separator-line {
+  stroke: #ccc;
+}
+
+.radar-quadrant-label {
+  text-anchor: start;
+
+  &.quadrant-1,
+  &.quadrant-3 {
+    text-anchor: end;
+  }
+}
+
+.radar-blip {
+  cursor: pointer;
+  transition: r 0.2s ease;
+
+  &:hover {
+    r: 7;
+  }
+}
+
+.radar-tooltip {
+  fill: #333;
+  font-size: 12px;
+  font-weight: bold;
+  pointer-events: none;
+  
+  // SVG text doesn't support background/padding like HTML,
+  // so this is handled via <foreignObject> or positioned <rect> + <text>
+}
+
+.radar-tooltip-background {
+  fill: white;
+  rx: 4;
+  ry: 4;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+}
