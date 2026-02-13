@@ -2,7 +2,7 @@ export const radarData = {
   quadrants: [
     { name: "Techniques", color: "#ff9900" },
     { name: "Tools", color: "#109618" },
-    { name: "Resources & Learning materials", color: "#0066cc" },
+    { name: "Resources", color: "#0066cc" },
     { name: "Languages & Frameworks", color: "#990099" },
   ],
   rings: [

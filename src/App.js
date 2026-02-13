@@ -10,6 +10,7 @@ import Bookshelf from "./components/Bookshelf";
 import Copyright from "./components/Copyright";
 import Practices from "./components/Practices";
 import Radar from "./components/Radar";
+import RadarQuadrant from "./components/RadarQuadrant";
 import Layout from "./Layout";
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/picks" element={<Picks />} />
               <Route path="/radar" element={<Radar />} />
+              <Route path="/radar/techniques" element={<RadarQuadrant quadrantIdx={0} />} />
+              <Route path="/radar/tools" element={<RadarQuadrant quadrantIdx={1} />} />
+              <Route path="/radar/resources" element={<RadarQuadrant quadrantIdx={2} />} />
+              <Route path="/radar/languages-frameworks" element={<RadarQuadrant quadrantIdx={3} />} />
               <Route path="/bookshelf" element={<Bookshelf />} />
               <Route path="/practices" element={<Practices/>} />
             </Routes>
