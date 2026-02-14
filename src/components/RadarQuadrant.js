@@ -1,6 +1,6 @@
 import { radarData } from "./RadarData";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import "../styles/radar.scss";
 import "../styles/radar-quadrant.scss";
 
@@ -332,6 +332,15 @@ const QuadrantSVG = ({ blips, rings, quadrants, quadrantIdx, showGrid }) => {
 
 export default function RadarQuadrant({ quadrantIdx }) {
     const { quadrants, rings, blips } = radarData;
+    const [searchParams] = useSearchParams();
+    const highlightedBlipNumber = searchParams.get('blip');
+    const highlightedRef = useRef(null);
+
+    useEffect(() => {
+        if (highlightedRef.current) {
+            highlightedRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [highlightedBlipNumber]);
 
     const quadrantBlips = blips
         .filter(blip => blip.quadrant === quadrantIdx)
@@ -345,8 +354,14 @@ export default function RadarQuadrant({ quadrantIdx }) {
                 <div className="quadrant-items">
                     {quadrantBlips.map((blip) => {
                         const blipNumber = blips.indexOf(blip) + 1;
+                        const isHighlighted = highlightedBlipNumber && parseInt(highlightedBlipNumber) === blipNumber;
                         return (
-                            <div key={`blip-${blipNumber}`} className="quadrant-item">
+                            <div 
+                                key={`blip-${blipNumber}`} 
+                                ref={isHighlighted ? highlightedRef : null}
+                                className={`quadrant-item ${isHighlighted ? 'highlighted' : ''}`}
+                                style={isHighlighted ? { borderColor: quadrants[quadrantIdx].color } : {}}
+                            >
                                 <div className="item-header">
                                     <span className="item-number">{blipNumber}</span>
                                     <span className="item-name">{blip.name}</span>

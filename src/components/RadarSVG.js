@@ -241,9 +241,11 @@ export const RadarSVG = ({blips, rings, quadrants, navigate, showGrid, width, he
         setTooltip(null);
     };
 
-    const handleQuadrantClick = (quadrantIdx) => {
+    const handleQuadrantClick = (quadrantIdx, blipIdx = null) => {
         if (navigate && QUADRANT_PATHS[quadrantIdx]) {
-            navigate(QUADRANT_PATHS[quadrantIdx]);
+            const path = QUADRANT_PATHS[quadrantIdx];
+            const fullPath = blipIdx !== null ? `${path}?blip=${blipIdx + 1}` : path;
+            navigate(fullPath);
         }
     };
 
@@ -357,7 +359,7 @@ export const RadarSVG = ({blips, rings, quadrants, navigate, showGrid, width, he
                                 quadrant={blip.quadrant}
                                 onTooltipShow={handleTooltipShow}
                                 onTooltipHide={handleTooltipHide}
-                                onClick={() => handleQuadrantClick(blip.quadrant)}
+                                onClick={() => handleQuadrantClick(blip.quadrant, idx)}
                                 x={blip.x}
                                 y={blip.y}
                             />
@@ -366,19 +368,26 @@ export const RadarSVG = ({blips, rings, quadrants, navigate, showGrid, width, he
                     {/* Render tooltip */}
                     {tooltip && (
                         <g key="radar-tooltip">
+                            <polygon
+                                key="radar-tooltip-pointer"
+                                className="radar-tooltip-background"
+                                points={`${tooltip.x},${tooltip.y - 10} ${tooltip.x - 6},${tooltip.y - 16} ${tooltip.x + 6},${tooltip.y - 16}`}
+                            />
                             <rect
                                 key="radar-tooltip-background"
                                 className="radar-tooltip-background"
-                                x={tooltip.x + 10}
-                                y={tooltip.y - 20}
+                                x={tooltip.x - (tooltip.name.length * 7 + 16)/2}
+                                y={tooltip.y - 40}
                                 width={tooltip.name.length * 7 + 16}
                                 height={24}
                             />
                             <text
                                 key="radar-tooltip-text"
                                 className="radar-tooltip"
-                                x={tooltip.x + 18}
-                                y={tooltip.y - 5}
+                                x={tooltip.x}
+                                y={tooltip.y - 27}
+                                textAnchor="middle"
+                                dominantBaseline="middle"
                             >
                                 {tooltip.name}
                             </text>

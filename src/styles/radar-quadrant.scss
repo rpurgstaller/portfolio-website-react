@@ -28,6 +28,13 @@
       border-radius: 0.375rem;
       transition: all 0.2s ease;
 
+      &.highlighted {
+        background: #fff8f0;
+        border: 2px solid;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+        padding: calc(1rem - 1px);
+      }
+
       .item-header {
         display: flex;
         align-items: center;
