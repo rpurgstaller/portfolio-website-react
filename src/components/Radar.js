@@ -38,14 +38,7 @@ export default function Radar() {
             <button 
                 onClick={() => setShowGrid(!showGrid)}
                 style={{
-                    padding: '8px 16px',
-                    marginBottom: '16px',
-                    backgroundColor: showGrid ? '#333' : '#ddd',
-                    color: showGrid ? '#fff' : '#000',
-                    border: 'none',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    fontSize: '14px'
+                    display: 'none'
                 }}
             >
                 {showGrid ? 'Hide Grid' : 'Show Grid'}

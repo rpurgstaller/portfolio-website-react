@@ -12,9 +12,6 @@ const Layout = ({ children }) => {
       case '/projects':
         title = 'Projects';
         break;
-      case '/picks':
-        title = 'Picks';
-        break;
       case '/bookshelf':
         title = 'Bookshelf';
         break;

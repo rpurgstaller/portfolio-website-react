@@ -1,6 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaStackOverflow } from "react-icons/fa";
-import { FaHackerrank } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import silhouette from "./../images/silhouette.webP"
 
@@ -20,20 +19,6 @@ export default function Home() {
               rel="noreferrer"
             >
               <FaGithub className="svg-icon" />
-            </a>
-            <a
-              href="https://hackerrank.com/romanpurgstaller"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaHackerrank className="svg-icon" />
-            </a>
-            <a
-              href="https://stackoverflow.com/users/1618893/roman-purgstaller?tab=profile"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaStackOverflow className="svg-icon" />
             </a>
             <a
               href="https://linkedin.com/in/roman-purgstaller-828b33229"

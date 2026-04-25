@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./styles/app.scss";
 import "./styles/header.scss";
 import "./styles/home.scss";
-import "./styles/picks.scss";
 import "./styles/bookshelf.scss";
 import "./styles/projects.scss";
 import "./styles/about.scss";

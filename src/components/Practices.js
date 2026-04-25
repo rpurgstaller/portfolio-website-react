@@ -11,12 +11,23 @@ export default function About() {
           meeting many talented and inspiring people who have enriched both my professional and personal life.
         </p>
         <p>
-          What consistently stood out to me is that the teams who deliver high-quality software, have an open mind,
+          What consistently stood out to me is that the teams who deliver high-quality products, have an open mind,
           embrace new challenges, and maintain a mindset of continuous learning. To me, this is how great teams scale.
         </p>
         <p>
           I strive to embody these habits and values in my daily work. Below is a selection of practices I try to follow.
         </p>
+        <div>
+          <h2>Product & Strategy</h2>
+          <ul>
+            <li>Understand your users: Dig beyond surface needs and always validate your assumptions</li>
+            <li>Learn fast: Use MVPs, PoCs, and experiments to iterate quickly</li>
+            <li>Manage your time: Understand the difference between urgency and importance</li>
+            <li>It's all about change: Building great products isn't enough. You also need to integrate it into the company's culture.</li>
+            <li>Make decisions based on data, not assumptions</li>
+          </ul>
+
+        </div>
         <div>
           <h2>Leadership</h2>
           <ul>
@@ -31,20 +42,9 @@ export default function About() {
           <ul>
             <li>Build testability into your code from the start and apply test-driven development</li>
             <li>Write adaptable code: Good code is easy to change and easy to test</li>
-            <li>Fix broken windows: Deliver software that’s “good enough”, but address poor design, bad decisions, and weak code immediately</li>
+            <li>Fix broken windows: Deliver products that’s “good enough”, but address poor design, bad decisions, and weak code immediately</li>
             <li>Invest in automation: Strong tooling helps you and your team scale</li>
           </ul>
-        </div>
-        <div>
-          <h2>Product & Strategy</h2>
-          <ul>
-            <li>Understand your users: Dig beyond surface needs and always validate your assumptions</li>
-            <li>Learn fast: Use MVPs, PoCs, and experiments to iterate quickly</li>
-            <li>Manage your time: Understand the difference between urgency and importance</li>
-            <li>It's all about change: Building great software isn't enough. You also need to integrate it into the company's culture.</li>
-            <li>Make decisions based on data, not assumptions</li>
-          </ul>
-
         </div>
       </div>
     </div>
