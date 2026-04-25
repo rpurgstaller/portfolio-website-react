@@ -13,7 +13,7 @@ export const radarData = {
   blips: [
     {
       name: "Bruno",
-      quadrant: 3,
+      quadrant: 1,
       ring: 0,
       description: "Really cool and lightweight API client. I especially like Bruno because it's Git native.",
     },
@@ -30,7 +30,8 @@ export const radarData = {
       ring: 2,
       description:
         "I use PyCharm mostly with my current stack — Python, Angular, and PostgreSQL. While I mostly " +
-        "prefer PyCharm for larger projects, I also started using it for side projects and smaller experiments.",
+        "prefer PyCharm for larger projects, I also started using it for side projects and smaller experiments." +
+        "Currently, I usually only use VS Code for programming.",
     },
     {
       name: "pgAdmin",
@@ -85,13 +86,9 @@ export const radarData = {
       name: "omnitools",
       quadrant: 1,
       ring: 0,
-      description: "",
-    },
-    {
-      name: "prism.tools",
-      quadrant: 1,
-      ring: 0,
-      description: "",
+      description: 
+        "Really cool collection of tools for developers. I like that it is fully static." + 
+        " Even though you can propably simply use LLMs instead, I often prefer using omnitools",
     },
     {
       name: "The Stack Overflow Podcast",
@@ -121,7 +118,9 @@ export const radarData = {
       name: "Hacker News",
       quadrant: 2,
       ring: 0,
-      description: "",
+      description: 
+        "Hacker news became my number one source for tech news for years. " + 
+        "I usually only check it a couple of times a week, but I especially enjoy the weekly newsletter.",
     },
     {
       name: "The Economist",
@@ -178,6 +177,36 @@ export const radarData = {
       description: "",
     },
     {
+      name: "python",
+      quadrant: 3,
+      ring: 0,
+      description: "",
+    },
+    {
+      name: "Pydantic",
+      quadrant: 3,
+      ring: 0,
+      description: "",
+    },
+    {
+      name: "Java",
+      quadrant: 3,
+      ring: 2,
+      description: "",
+    },
+    {
+      name: "C/C++",
+      quadrant: 3,
+      ring: 2,
+      description: "",
+    },
+    {
+      name: "Go",
+      quadrant: 3,
+      ring: 1,
+      description: "",
+    },
+    {
       name: "ruff",
       quadrant: 3,
       ring: 0,
@@ -213,5 +242,11 @@ export const radarData = {
       ring: 1,
       description: "",
     },
+    {
+      name: "ByteByteGo",
+      quadrant: 2,
+      ring: 1,
+      description: "",
+    }
   ],
 };
