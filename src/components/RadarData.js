@@ -174,7 +174,14 @@ export const radarData = {
       url: "https://pydantic.dev/",
       quadrant: 3,
       ring: 0,
-      description: <>I stopped worrying and loved Pydantic when I started building web apps with FastAPI, PostgreSQL, and Angular (Btw., if you get the reference: One of my favourite movies).</>,
+      description: <>I stopped worrying and loved Pydantic when I started building web apps with FastAPI, PostgreSQL, and Angular (Great movie btw., if you get the reference).</>,
+    },
+    {
+      name: "Streamlit",
+      url: "https://streamlit.io/",
+      quadrant: 3,
+      ring: 1,
+      description: <>I would love to play around with Streamlit. I'm thinking of creating a health dashboard, based on some metrics I from my daily notes.</>,
     },
     {
       name: "Java",
@@ -227,7 +234,14 @@ export const radarData = {
       name: "PL/SQL",
       url: "https://www.oracle.com/database/technologies/appdev/plsql.html",
       quadrant: 3,
-      ring: 1,
+      ring: 0,
+      description: <></>,
+    },
+    {
+      name: "PostgreSQL",
+      url: "https://www.postgresql.org/",
+      quadrant: 3,
+      ring: 0,
       description: <></>,
     },
     {
