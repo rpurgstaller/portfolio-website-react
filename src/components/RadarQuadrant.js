@@ -1,4 +1,5 @@
 import { radarData } from "./RadarData";
+import { ExternalLink } from "../utils/Link";
 import { useState, useEffect, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import "../styles/radar.scss";
@@ -364,13 +365,13 @@ export default function RadarQuadrant({ quadrantIdx }) {
                             >
                                 <div className="item-header">
                                     <span className="item-number">{blipNumber}</span>
-                                    <span className="item-name">{blip.name}</span>
+                                    <span className="item-name">{blip.url ? ExternalLink(blip.url, blip.name) : blip.name}</span>
                                     <span className="item-ring" style={{ backgroundColor: quadrants[quadrantIdx].color }}>
                                         {rings[blip.ring].name}
                                     </span>
                                 </div>
                                 <p className="item-description">
-                                    {blip.description && blip.description.trim() ? blip.description : "Coming soon"}
+                                    {blip.description || "Coming soon"}
                                 </p>
                             </div>
                         );

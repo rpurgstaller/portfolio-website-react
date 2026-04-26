@@ -1,3 +1,11 @@
+import {ExternalLinkRunningText} from "../utils/Link";
+
+
+let bramsesHighlyOpinionatedVault = ExternalLinkRunningText(
+  "https://github.com/bramses/bramses-highly-opinionated-vault-2023",
+  "bramses highly opinionated vault"
+);
+
 export const radarData = {
   quadrants: [
     { name: "Techniques", color: "#ff9900" },
@@ -13,240 +21,227 @@ export const radarData = {
   blips: [
     {
       name: "Bruno",
+      url: "https://www.usebruno.com/",
       quadrant: 1,
       ring: 0,
-      description: "Really cool and lightweight API client. I especially like Bruno because it's Git native.",
+      description: <>Really cool and lightweight API client. I especially like Bruno because it's Git native.</>,
     },
     {
       name: "VS Code",
+      url: "https://code.visualstudio.com/",
       quadrant: 1,
       ring: 0,
-      description:
-        "I use VS Code for most of my daily tasks. For larger projects, though, I currently prefer PyCharm.",
+      description: <>I use VS Code for most of my daily tasks. For larger projects, though, I currently prefer PyCharm.</>,
     },
     {
       name: "PyCharm",
+      url: "https://www.jetbrains.com/pycharm/",
       quadrant: 1,
       ring: 2,
-      description:
-        "I use PyCharm mostly with my current stack — Python, Angular, and PostgreSQL. While I mostly " +
-        "prefer PyCharm for larger projects, I also started using it for side projects and smaller experiments." +
-        "Currently, I usually only use VS Code for programming.",
+      description: <>I use PyCharm mostly with my current stack — Python, Angular, and PostgreSQL. While I mostly prefer PyCharm for larger projects, I also started using it for side projects and smaller experiments.Currently, I usually only use VS Code for programming.</>,
     },
     {
       name: "pgAdmin",
+      url: "https://www.pgadmin.org/",
       quadrant: 1,
       ring: 0,
-      description:
-        "While I write most of my queries in PyCharm, I prefer using pgAdmin for more complex queries " +
-        "and for analyzing execution plans.",
+      description: <>While I write most of my queries in PyCharm, I prefer using pgAdmin for more complex queries and for analyzing execution plans.</>,
     },
     {
       name: "Tuta",
+      url: "https://mail.tutanota.com/",
       quadrant: 1,
       ring: 0,
-      description:
-        "I think the focus on privacy and security is really cool. Even though the product is still in " +
-        "its early stages, it mostly works for what I need.",
+      description: <>I think the focus on privacy and security is really cool. Even though the product is still in its early stages, it mostly works for what I need.</>,
     },
     {
       name: "Obsidian",
+      url: "https://obsidian.md/",
       quadrant: 1,
       ring: 0,
-      description:
-        "I use Obsidian for note-taking and organizing my personal life. The way I use obsidian is " +
-        "inspired by the zettelkasten method as well as some of the methods and philosophies behind " +
-        "bramses highly opinionated vault.",
+      description: <>I use Obsidian for note-taking and organizing my personal life. The way I use obsidian is inspired by the zettelkasten method as well as some of the methods and philosophies behind {bramsesHighlyOpinionatedVault}</>
     },
     {
       name: "KeePass",
+      url: "https://keepass.info/",
       quadrant: 1,
       ring: 0,
-      description:
-        "My go-to password manager for years. I prefer KeePass's local-first approach. Syncing between " +
-        "devices requires a bit of manual effort, but it works smoothly when combined with Syncthing.",
+      description: <>My go-to password manager for years. I prefer KeePass's local-first approach. Syncing between devices requires a bit of manual effort, but it works smoothly when combined with Syncthing.</>,
     },
     {
       name: "Autohotkey",
+      url: "https://www.autohotkey.com/",
       quadrant: 1,
       ring: 0,
-      description:
-        "Since I use a US keyboard layout, I rely on AutoHotkey primarily for typing German umlauts " +
-        "(ä, ö, ü, ß) on Windows. On my personal Linux PC, I use autokey for the same purpose.",
+      description: <>Since I use a US keyboard layout, I rely on AutoHotkey primarily for typing German umlauts (ä, ö, ü, ß) on Windows. On my personal Linux PC, I use autokey for the same purpose.</>,
     },
     {
       name: "Syncthing",
+      url: "https://syncthing.net/",
       quadrant: 1,
       ring: 0,
-      description:
-        "I use Syncthing to sync files between my devices. It's a cool alternative to cloud-services, " +
-        "especially for sensitive data like my KeePass database.",
+      description: <>I use Syncthing to sync files between my devices. It's a cool alternative to cloud-services, especially for sensitive data like my KeePass database.</>,
     },
     {
       name: "omnitools",
+      url: "https://omnitools.dev/",
       quadrant: 1,
       ring: 0,
-      description: 
-        "Really cool collection of tools for developers. I like that it is fully static." + 
-        " Even though you can propably simply use LLMs instead, I often prefer using omnitools",
+      description: <>Really cool collection of tools for developers. I like that it is fully static.</>,
     },
     {
       name: "The Stack Overflow Podcast",
+      url: "https://stackoverflow.blog/podcast/",
       quadrant: 2,
       ring: 0,
-      description:
-        "I really enjoy listening to the Stack Overflow Podcast from time to time. I've learned a " +
-        "bunch of interesting stuff about software engineering, especially about team culture and leadership.",
+      description: <>I really enjoy listening to the Stack Overflow Podcast from time to time. I've learned a bunch of interesting stuff about software engineering, especially about team culture and leadership.</>,
     },
     {
       name: "The Pragmatic Engineer",
+      url: "https://www.pragmaticengineer.com/",
       quadrant: 2,
       ring: 0,
-      description:
-        "The Pragmatic Engineer is a really cool podcast about software engineering, leadership, and " +
-        "career development. I also enjoyed the Software Engineer's Guidebook by Gergely Orosz.",
+      description: <>The Pragmatic Engineer is a really cool podcast about software engineering, leadership, and career development. I also enjoyed the Software Engineer's Guidebook by Gergely Orosz.</>,
     },
     {
       name: "Darknet Diaries",
+      url: "https://darknetdiaries.com/",
       quadrant: 2,
       ring: 0,
-      description:
-        "Darknet Diaries covers topics like hacking, cybercrime, and internet privacy. I really like " +
-        "the storytelling style and thriller-like atmosphere of the episodes.",
+      description: <>Darknet Diaries covers topics like hacking, cybercrime, and internet privacy. I really like the storytelling style and thriller-like atmosphere of the episodes.</>,
     },
     {
       name: "Hacker News",
+      url: "https://news.ycombinator.com/",
       quadrant: 2,
       ring: 0,
-      description: 
-        "Hacker news became my number one source for tech news for years. " + 
-        "I usually only check it a couple of times a week, but I especially enjoy the weekly newsletter.",
+      description: <>Hacker news became my number one source for tech news for years. I usually only check it a couple of times a week, but I especially enjoy the weekly newsletter.</>,
     },
     {
-      name: "The Economist",
-      quadrant: 2,
-      ring: 0,
-      description: "",
-    },
-    {
-      name: "farnamstreetblog",
+      name: "Farnam Street Blog",
+      url: "https://fs.blog/",
       quadrant: 2,
       ring: 2,
-      description: "",
+      description: <>I learned a lot about leadership and decision making from the Farnam Street Blog. However, I haven't read it in a while and moved on to other sources.</>,
     },
     {
-      name: "KANBAN",
+      name: "Kanban",
       quadrant: 0,
       ring: 0,
-      description: "",
+      description: <>Currently, I usually use kanban boards to manage my work and personal projects. I never used it a professional setup for a longer period of time.</>,
     },
     {
       name: "Test-driven-development",
       quadrant: 0,
       ring: 0,
-      description: "",
+      description: <>Once I started usind TDD, it became one of those techniques that makes you wonder how you ever survived without it. It forces me to think about the design before I start writing logic and removes so much manual testing and debugging.</>,
     },
     {
       name: "pre-commit hooks",
+      url: "https://pre-commit.com/",
       quadrant: 0,
       ring: 0,
-      description: "",
+      description: <>I started using pre-commit hooks like linting and formatting hooks a while ago. What was really cool though, was to create your own hooks. For example, in a larger project, I used Mermaid to create diagrams of the database schema and used a pre-commit hook to automatically update the diagrams whenever the schema changed.</>,
     },
     {
       name: "communities of practice",
       quadrant: 0,
       ring: 1,
-      description: "",
+      description: <></>,
     },
     {
-      name: "Agends.md",
-      quadrant: 0,
-      ring: 1,
-      description: "",
-    },
-    {
-      name: "SCRUM",
+      name: "Scrum",
       quadrant: 0,
       ring: 2,
-      description: "",
+      description: <>Scrum, or hybrid versions of it were often used in my teams. For me, the main benefit was usually that you can react quickly to change and that it encourages you to deliver in small increments.</>,
     },
     {
       name: "UV",
+      url: "https://docs.astral.sh/uv/",
       quadrant: 3,
       ring: 0,
-      description: "",
+      description: <></>,
     },
     {
-      name: "python",
+      name: "Python",
+      url: "https://www.python.org/",
       quadrant: 3,
       ring: 0,
-      description: "",
+      description: <>Python makes me happy.</>,
     },
     {
       name: "Pydantic",
+      url: "https://pydantic.dev/",
       quadrant: 3,
       ring: 0,
-      description: "",
+      description: <>I stopped worrying and loved Pydantic when I started building web apps with FastAPI, PostgreSQL, and Angular (Btw., if you get the reference: One of my favourite movies).</>,
     },
     {
       name: "Java",
+      url: "https://www.java.com/",
       quadrant: 3,
       ring: 2,
-      description: "",
+      description: <>I used Java in University and early in my career. A few years later, when I prepared for a technical interview, I was blown away by how much the language had evolved.I think it would be fun to use Java again in a future project.</>,
     },
     {
       name: "C/C++",
       quadrant: 3,
       ring: 2,
-      description: "",
+      description: <>I would say C and C++ offered me blood, toil, tears and sweat. I learned programming with C and used C++ to dive into extending a unix like operating system as a part of a university course.I remember the long nights I spent debugging memory leaks, deadlocks and kernel panics. Looking back, I think those experiences made me a so much better programmer.</>,
     },
     {
       name: "Go",
       quadrant: 3,
       ring: 1,
-      description: "",
+      description: <>I'm eyeing Go for a while now, and it would be really cool to try it out in a project. Unfortunately, I haven't found the time yet.</>,
     },
     {
       name: "ruff",
+      url: "https://docs.astral.sh/ruff/",
       quadrant: 3,
       ring: 0,
-      description: "",
-    },
-    {
-      name: "black",
-      quadrant: 3,
-      ring: 0,
-      description: "",
+      description: <></>,
     },
     {
       name: "flake8",
+      url: "https://flake8.pycqa.org/",
       quadrant: 3,
       ring: 2,
-      description: "",
+      description: <></>,
     },
     {
       name: "Django",
+      url: "https://www.djangoproject.com/",
       quadrant: 3,
       ring: 2,
-      description: "",
+      description: <></>,
     },
     {
       name: "Celery",
+      url: "https://docs.celeryq.dev/en/stable/",
       quadrant: 3,
       ring: 2,
-      description: "",
+      description: <></>,
     },
     {
       name: "PL/SQL",
+      url: "https://www.oracle.com/database/technologies/appdev/plsql.html",
       quadrant: 3,
       ring: 1,
-      description: "",
+      description: <></>,
     },
     {
-      name: "ByteByteGo",
-      quadrant: 2,
+      name: "Work Diaries",
+      quadrant: 0,
+      ring: 0,
+      description: <>I use obsidian to manage my daily notes and to keep a work diary. Especially after stressful days, I find it really helpful to refer back to my notes and reflect on what happened and how I handled it.</>,
+    },
+    {
+      name: "Typer",
+      url: "https://typer.tiangolo.com/",
+      quadrant: 3,
       ring: 1,
-      description: "",
+      description: <></>,
     }
   ],
 };
