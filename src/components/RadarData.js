@@ -191,12 +191,6 @@ export const radarData = {
       description: <>I used Java in University and early in my career. A few years later, when I prepared for a technical interview, I was blown away by how much the language had evolved.I think it would be fun to use Java again in a future project.</>,
     },
     {
-      name: "C/C++",
-      quadrant: 3,
-      ring: 2,
-      description: <>I would say C and C++ offered me blood, toil, tears and sweat. I learned programming with C and used C++ to dive into extending a unix like operating system as a part of a university course.I remember the long nights I spent debugging memory leaks, deadlocks and kernel panics. Looking back, I think those experiences made me a so much better programmer.</>,
-    },
-    {
       name: "Go",
       quadrant: 3,
       ring: 1,
