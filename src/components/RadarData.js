@@ -45,7 +45,7 @@ export const radarData = {
       url: "https://www.pgadmin.org/",
       quadrant: 1,
       ring: 0,
-      description: <>While I write most of my queries in PyCharm, I prefer using pgAdmin for more complex queries and for analyzing execution plans.</>,
+      description: <>While I write most of my queries with PyCharm's integrated database tools, I prefer using pgAdmin for more complex queries and for analyzing execution plans.</>,
     },
     {
       name: "Tuta",
@@ -111,6 +111,13 @@ export const radarData = {
       description: <>Darknet Diaries covers topics like hacking, cybercrime, and internet privacy. I really like the storytelling style and thriller-like atmosphere of the episodes.</>,
     },
     {
+      name: "DataTalks.Club",
+      url: "https://datatalks.club/",
+      quadrant: 2,
+      ring: 0,
+      description: <>Really cool community about data, machine learning, and engineering. It helped me a lot to dive deeper into the subject.</>,
+    },
+    {
       name: "Hacker News",
       url: "https://news.ycombinator.com/",
       quadrant: 2,
@@ -147,7 +154,7 @@ export const radarData = {
       name: "communities of practice",
       quadrant: 0,
       ring: 1,
-      description: <></>,
+      description: <>We had this in a previous team. I thought it brought a lot of value. I would love to try this in the future again.</>,
     },
     {
       name: "Scrum",
