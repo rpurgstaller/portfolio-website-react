@@ -17,3 +17,52 @@
   color: colors.$secondary-text;
   margin-top: 0.2rem;
 }
+
+.bookshelf-view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.bookshelf-view-toggle {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.bookshelf-view-toggle button {
+  border: 1px solid colors.$light-gray;
+  background: colors.$surface;
+  color: colors.$text;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.bookshelf-view-toggle button.active {
+  background: colors.$primary;
+  color: colors.$surface;
+  border-color: colors.$primary;
+}
+
+.bookshelf-graph-wrapper {
+  margin-top: 2rem;
+}
+
+.bookshelf-graph-container {
+  width: 100%;
+  min-height: 620px;
+  // border: 1px solid colors.$light-gray;
+  border-radius: 1rem;
+  background: colors.$surface;
+}
+
+.bookshelf-graph-container .cytoscape-node {
+  font-family: inherit;
+}
